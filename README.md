@@ -2,7 +2,7 @@
 
 ###View 
 
-[beubi.bitbucket.org](beubi.bitbucket.org)
+[beubi.bitbucket.org](http://beubi.bitbucket.org/)
 
 ###Update
 
