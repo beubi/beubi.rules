@@ -2,6 +2,11 @@ template:
     directory: website
     url: https://github.com/CouscousPHP/Template-Dark.git
 
+scripts:
+    before:
+      - mkdir -p .couscous/generated/images
+      - cp images/* .couscous/generated/images
+
 exclude:
     - vendor
     - website

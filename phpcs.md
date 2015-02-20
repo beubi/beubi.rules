@@ -195,7 +195,7 @@ public function isAvailable()
 
 * Chain calls on newline (`->`) SHOULD be aligned at least at the same level or in the most readable way:
 
-    ``` php
+    ```php
     $someLongVarName = $object->longMethodNameWithSomeArguments($argumentOne, $argumentTwo, $argumentThree)
                               ->fooMethod($fooArgument)
                               ->barMethod($barArgument);
@@ -220,7 +220,7 @@ $totalUsers  = 10;
 * Variables declared on multiple lines MUST be aligned based on the longer variable name, that assignments MUST NOT be aligned together
 if they have a blank line in between
 
-``` php
+```php
 
 $bar              = 'bar';
 $foo              = true;
@@ -233,7 +233,7 @@ $veryLongVariableNames2 = 100;
 ## Array
 
 * Arrays SHOULD be declared with short PHP syntax.
-``` php
+```php
 
 $array = [1, 2, 'foo' => 'bar',]
 
@@ -242,7 +242,7 @@ $array = [1, 2, 'foo' => 'bar',]
 * The last array argument should end with a comma
 
 * Long nested array MUST follow this format, indenting one tab:
-``` php
+```php
 
 $array = [
 	'first',
@@ -262,7 +262,7 @@ $array = [
 We use `Monolo\Logger` in our codebase. It implements the [PSR-3 standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md).
 Let's program to an interface, whenever we need the Logger, just pass the `LoggerInteface`
 
-``` php
+```php
 namespace Namshi\What\Ever;
 
 use Psr\Log\LoggerInterface;
@@ -278,7 +278,7 @@ The logger argument MUST BE the last argument, preceding the first optional argu
 
 When catching an exception and we use the `Logger`, we MUST provide the complete exception message
 
-``` php
+```php
 
 try {
 	//doSomething()
@@ -312,7 +312,7 @@ Even if it could be better sometimes to avoid *Interface, *Handler, *Command etc
 providing that information, it could lead to a mess when you're using many class with the same name but different
 namespace, for example:
 
-``` php
+```php
 
 use Namshi\Inteface\Product as ProductInterface;
 use Namshi\Importer\Product as ProductImporter;
@@ -323,7 +323,7 @@ use Namshi\Model\Product;
 
 better:
 
-``` php
+```php
 
 use Namshi\Inteface\ProductInterface;
 use Namshi\Importer\ProductImporter;
@@ -337,7 +337,7 @@ use Namshi\Model\Product;
 
 * When you create constants name, think about namespaces:
 
-``` php
+```php
 
 const MESSAGE_STATUS_SENT     = 'message sent';
 const MESSAGE_STATUS_REJECTED = 'message rejected';

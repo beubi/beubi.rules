@@ -35,7 +35,7 @@ We follow some very basic rules:
 
 Example:
 
-``` javascript
+```javascript
 /**
 * My Object Definition
 */
@@ -96,7 +96,7 @@ is when we nee mixins / helpers, where we declare a bunch of
 utility methods, with different conceptual scopes, in the same
 file.
 
-``` javascript
+```javascript
 var helpers = {
   convertDollarsToEuros: function(amount) {
     // ...
@@ -113,7 +113,7 @@ Avoid aliasing objects with a `self` variable, as
 then it could lead to scope issues; prefer aliasing them
 with the service "name" instead.
 myObjectInstance
-``` javascript
+```javascript
 /**
  * User service.
  */
@@ -132,7 +132,7 @@ and using plain old vanilla objects speeds us up.
 When you need to pass a few arguments to a function,
 consider refactoring them as `options`:
 
-``` javascript
+```javascript
 // mmmmm
 http.request(method, url, headers, cookies);
 
@@ -149,7 +149,7 @@ http.request(options);
 
 This leads to minimal changes in the function's implementation:
 
-``` javascript
+```javascript
 http.request = function(options) {
   // just add some logic that uses a new option
   // and you don't have to change signature, etc...
@@ -207,14 +207,14 @@ complexity compared to Grunt, our old build tool.
 
 `require` statements should be on top of each file:
 
-``` javascript
+```javascript
 var a = require('b');
 ```
 
 If your `module.exports` is fairly simple,
 declare it straight away:
 
-``` javascript
+```javascript
 module.exports = function() {
   console.log("I'm useless!");
 }
@@ -223,7 +223,7 @@ module.exports = function() {
 but if you have a bunch of things, consider
 splitting the object declaration and the export:
 
-``` javascript
+```javascript
 var service = {};
 
 var log = function(what){
