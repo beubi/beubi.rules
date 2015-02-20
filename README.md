@@ -1,8 +1,8 @@
-# Beubi's technical Documentation
+# Beubi's Technical Documentation
 
 ###View 
 
-beubi.bitbucket.org
+[](beubi.bitbucket.org)
 
 ###Update
 
@@ -14,5 +14,5 @@ You can update the docs by:
 
 * run ```php couscous.phar deploy```
 
-* merge the "gh-pages" to "master"
+* merge the "gh-pages" into "master"
 
