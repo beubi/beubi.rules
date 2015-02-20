@@ -13,6 +13,9 @@ exclude:
 
 baseUrl: http://beubi.bitbucket.org
 
+bitbucket:
+    user: beubi
+    repo: beubi.bitbucket.org
 
 title: Beubi CS!
 subTitle: This is a great project.
