@@ -55,7 +55,7 @@
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
                     <h1>PHP coding standards @Beubi</h1>
-<p>This guide describes the set of rules we apply at Namshi in our PHP codebase.</p>
+<p>This guide describes the set of rules we apply at Beubi in our PHP codebase.</p>
 <h2>Formatting</h2>
 <p>We mostly follow the <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.html">PSR-2 standard</a></p>
 <ul>
@@ -306,7 +306,7 @@ $array = [
 <h2>Logger</h2>
 <p>We use <code>Monolo\Logger</code> in our codebase. It implements the <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.html">PSR-3 standard</a>.
 Let's program to an interface, whenever we need the Logger, just pass the <code>LoggerInteface</code></p>
-<pre><code class="language-php">namespace Namshi\What\Ever;
+<pre><code class="language-php">namespace Beubi\What\Ever;
 
 use Psr\Log\LoggerInterface;
 
@@ -351,18 +351,18 @@ try {
 providing that information, it could lead to a mess when you're using many class with the same name but different
 namespace, for example:</p>
 <pre><code class="language-php">
-use Namshi\Inteface\Product as ProductInterface;
-use Namshi\Importer\Product as ProductImporter;
-use Namshi\Handler\Product as ProductHandler;
-use Namshi\Manager\Product as ProductManager;
-use Namshi\Model\Product;</code></pre>
+use Beubi\Inteface\Product as ProductInterface;
+use Beubi\Importer\Product as ProductImporter;
+use Beubi\Handler\Product as ProductHandler;
+use Beubi\Manager\Product as ProductManager;
+use Beubi\Model\Product;</code></pre>
 <p>better:</p>
 <pre><code class="language-php">
-use Namshi\Inteface\ProductInterface;
-use Namshi\Importer\ProductImporter;
-use Namshi\Handler\ProductHandler;
-use Namshi\Manager\ProductManager;
-use Namshi\Model\Product;</code></pre>
+use Beubi\Inteface\ProductInterface;
+use Beubi\Importer\ProductImporter;
+use Beubi\Handler\ProductHandler;
+use Beubi\Manager\ProductManager;
+use Beubi\Model\Product;</code></pre>
 <h2>Constants</h2>
 <ul>
 <li>When you create constants name, think about namespaces:</li>
@@ -397,14 +397,14 @@ const PAYMENT_FAILED        = 'Payment Failed';</code></pre>
 <li>Prepend the service name with the <strong>vendor</strong> name and the <strong>bundle name</strong></li>
 </ul>
 <pre><code class="language-yml">
-namshi_rose.search.client:
-    class: Namshi\RoseBundle\Search\SolrSearch
+beubi_rose.search.client:
+    class: Beubi\RoseBundle\Search\SolrSearch
     arguments:
         searchClient  :  @solarium.client
-        avilableFacets:  '%namshi_rose.available_facets%'
+        avilableFacets:  '%beubi_rose.available_facets%'
         shops         :  @shops
-        locale        :  @namshi.locale
-        availableSorts:  '%namshi_rose.solr_sort_options%'
+        locale        :  @beubi.locale
+        availableSorts:  '%beubi_rose.solr_sort_options%'
         logger         : @logger.solr
 </code></pre>
 <ul>
