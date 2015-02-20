@@ -1,7 +1,7 @@
 ---
 currentMenu: home
 ---
-# Couscous Dark template
+# Couscous Light template
 
 ![](screenshot.png)
 
@@ -11,7 +11,7 @@ To use the template, set it up in your `couscous.yml` configuration file:
 
 ```yaml
 template:
-    url: https://github.com/CouscousPHP/Template-Dark
+    url: https://github.com/CouscousPHP/Template-Light
 ```
 
 ## Configuration
@@ -32,21 +32,15 @@ subTitle: This is a great project.
 
 # The left menu bar
 menu:
-    sections:
-        main:
-            name: Main documentation
-            items:
-                home:
-                    text: Home page
-                    # You can use relative urls
-                    relativeUrl: doc/faq.html
-                foo:
-                    text: Another link
-                    # Or absolute urls
-                    absoluteUrl: https://example.com
-        other:
-            name: Other topics
-            items:
+    items:
+        home:
+            text: Home page
+            # You can use relative urls
+            relativeUrl: doc/faq.html
+        foo:
+            text: Another link
+            # Or absolute urls
+            absoluteUrl: https://example.com
 ```
 
 Note that the menu items can also contain HTML:
