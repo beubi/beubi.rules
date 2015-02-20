@@ -1,6 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<html>
+        <title></title>
 
-    <h1>Que página tão linda!</h1>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/highlight.dark.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
 
+        <header class="navbar navbar-default navbar-fixed-top">
+
+            <a class="navbar-brand" href="/">
+                The title
+                <small class="hidden-xs hidden-sm">
+                    This is the default subtitle!
+                </small>
+            </a>
+
+            
+        </header>
+
+        <main class="container">
+            <div class="row">
+
+                
+                <section id="content" class="col-sm-12">
+                    <h1>README</h1>
+<p>This README would normally document whatever steps are necessary to get your application up and running.</p>
+<h3>What is this repository for?</h3>
+<ul>
+<li>Quick summary</li>
+<li>Version</li>
+<li><a href="https://bitbucket.org/tutorials/markdowndemo">Learn Markdown</a></li>
+</ul>
+<h3>How do I get set up?</h3>
+<ul>
+<li>Summary of set up</li>
+<li>Configuration</li>
+<li>Dependencies</li>
+<li>Database configuration</li>
+<li>How to run tests</li>
+<li>Deployment instructions</li>
+</ul>
+<h3>Contribution guidelines</h3>
+<ul>
+<li>Writing tests</li>
+<li>Code review</li>
+<li>Other guidelines</li>
+</ul>
+<h3>Who do I talk to?</h3>
+<ul>
+<li>Repo owner or admin</li>
+<li>Other community or team contact</li>
+</ul>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p class="text-muted">
+                    website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
+                </p>
+            </div>
+        </footer>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="http://yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+
+        <script>
+            $(function() {
+                $("section>h1").wrap('<div class="page-header" />');
+                // Syntax highlighting
+                hljs.initHighlightingOnLoad();
+            });
+        </script>
+
+    </body>
 </html>

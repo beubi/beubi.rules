@@ -1,29 +1,65 @@
-# README #
+---
+currentMenu: home
+---
+# Couscous Light template
 
-This README would normally document whatever steps are necessary to get your application up and running.
+![](screenshot.png)
 
-### What is this repository for? ###
+## Usage
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+To use the template, set it up in your `couscous.yml` configuration file:
 
-### How do I get set up? ###
+```yaml
+template:
+    url: https://github.com/CouscousPHP/Template-Light
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## Configuration
 
-### Contribution guidelines ###
+Here are all the variables you can set in your `couscous.yml`:
 
-* Writing tests
-* Code review
-* Other guidelines
+```yaml
+# Base URL of the published website
+baseUrl: http://username.github.io/project
 
-### Who do I talk to? ###
+# Used to link to the GitHub project
+github:
+    user: myself
+    repo: my-project
 
-* Repo owner or admin
-* Other community or team contact
+title: My project
+subTitle: This is a great project.
+
+# The left menu bar
+menu:
+    items:
+        home:
+            text: Home page
+            # You can use relative urls
+            relativeUrl: doc/faq.html
+        foo:
+            text: Another link
+            # Or absolute urls
+            absoluteUrl: https://example.com
+```
+
+Note that the menu items can also contain HTML:
+
+```yaml
+home:
+    text: "<i class=\"fa fa-github\"></i> Home page"
+    relativeUrl: doc/faq.html
+```
+
+## Menu
+
+To set the current menu item (i.e. highlighted menu item), set the `currentMenu`
+key in the Markdown files:
+
+```markdown
+---
+currentMenu: home
+---
+
+# Welcome
+```
