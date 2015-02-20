@@ -1,4 +1,8 @@
-# PHP coding standards @Namshi
+---
+currentMenu: phpcs
+---
+
+# PHP coding standards @Beubi
 
 This guide describes the set of rules we apply at Namshi in our PHP codebase.
 

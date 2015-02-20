@@ -1,0 +1,31 @@
+template:
+    directory: website
+    url: https://github.com/CouscousPHP/Template-Dark.git
+
+exclude:
+    - vendor
+    - website
+
+baseUrl: http://beubi.bitbucket.org
+
+
+title: Beubi CS!
+subTitle: This is a great project.
+
+menu:
+    sections:
+        main:
+            name: Main documentation
+            items:
+                home:
+                    text: Home page
+                    relativeUrl: index.html
+                phpcs:
+                    text: PHP CS
+                    relativeUrl: phpcs.html
+                jscs:
+                    text: JS CS
+                    relativeUrl: jscs.html
+        other:
+            name: Other topics
+            items:
