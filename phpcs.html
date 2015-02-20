@@ -106,20 +106,20 @@ foreach ($array as $key =&gt; $value) {
 <li>
 <p>PHP keywords MUST be in lower case. The PHP constants true, false, and null MUST be in lower case.</p>
 </li>
-<li>Exclamation mark in (negating operator) MUST be prepended and followed with one whitespace
-<pre><code class="language-php"></code></pre></li>
+<li>Exclamation mark in (negating operator) MUST be prepended and followed with one whitespace</li>
 </ul>
-<p>if ( ! $item-&gt;available()) {
-//whatever
-}</p>
-<pre><code>
-## Structure
-* Add a single space after each comma delimiter;
-
-* Add a single space around operators (==, &amp;&amp;, ...);
-
-```php
-
+<pre><code class="language-php">
+if ( ! $item-&gt;available()) {
+    //whatever
+}</code></pre>
+<h2>Structure</h2>
+<ul>
+<li>
+<p>Add a single space after each comma delimiter;</p>
+</li>
+<li>Add a single space around operators (==, &amp;&amp;, ...);</li>
+</ul>
+<pre><code class="language-php">
 if ($item-&gt;isAvailable &amp;&amp; $item-&gt;isAwesome()) {
     //whatever
 }
@@ -170,23 +170,27 @@ $e = new \Exception(sprintf("Can't find item %s with quantity %d", $itemNumber, 
 </code></pre>
 <h2>Class</h2>
 <ul>
-<li>Class names MUST be declared in <a href="http://en.wikipedia.org/wiki/Studly_caps"><code>StudlyCaps</code></a>
-<pre><code class="language-php"></code></pre></li>
+<li>Class names MUST be declared in <a href="http://en.wikipedia.org/wiki/Studly_caps"><code>StudlyCaps</code></a></li>
 </ul>
-<p>class Foo
-{</p>
-<p>}</p>
-<p>class FooBar
-{</p>
-<p>}</p>
-<p>class FooBarWhatever
-{</p>
-<p>}</p>
-<pre><code>
-* Class constants MUST be declared in all upper case with underscore separators
+<pre><code class="language-php">
+class Foo
+{
 
-```php
+}
 
+class FooBar
+{
+
+}
+
+class FooBarWhatever
+{
+
+}</code></pre>
+<ul>
+<li>Class constants MUST be declared in all upper case with underscore separators</li>
+</ul>
+<pre><code class="language-php">
 const DEFAULT_LANGUAGE   = en;
 const STATUS_UNAVAILABLE = 3;
 </code></pre>
@@ -286,16 +290,18 @@ $veryLongVariableNames1 = 50;
 $veryLongVariableNames2 = 100;</code></pre>
 <h2>Array</h2>
 <ul>
-<li>Arrays SHOULD be declared with short PHP syntax.
-<pre><code class="language-php"></code></pre></li>
+<li>Arrays SHOULD be declared with short PHP syntax.</li>
 </ul>
-<p>$array = [1, 2, 'foo' =&gt; 'bar',]</p>
-<pre><code>
-* The last array argument should end with a comma
-
-* Long nested array MUST follow this format, indenting one tab:
-```php
-
+<pre><code class="language-php">
+$array = [1, 2, 'foo' =&gt; 'bar',]
+</code></pre>
+<ul>
+<li>
+<p>The last array argument should end with a comma</p>
+</li>
+<li>Long nested array MUST follow this format, indenting one tab:</li>
+</ul>
+<pre><code class="language-php">
 $array = [
     'first',
     'second',
