@@ -4,7 +4,7 @@ currentMenu: phpcs
 
 # PHP coding standards @Beubi
 
-This guide describes the set of rules we apply at Namshi in our PHP codebase.
+This guide describes the set of rules we apply at Beubi in our PHP codebase.
 
 ## Formatting
 
@@ -267,7 +267,7 @@ We use `Monolo\Logger` in our codebase. It implements the [PSR-3 standard](https
 Let's program to an interface, whenever we need the Logger, just pass the `LoggerInteface`
 
 ```php
-namespace Namshi\What\Ever;
+namespace Beubi\What\Ever;
 
 use Psr\Log\LoggerInterface;
 
@@ -318,22 +318,22 @@ namespace, for example:
 
 ```php
 
-use Namshi\Inteface\Product as ProductInterface;
-use Namshi\Importer\Product as ProductImporter;
-use Namshi\Handler\Product as ProductHandler;
-use Namshi\Manager\Product as ProductManager;
-use Namshi\Model\Product;
+use Beubi\Inteface\Product as ProductInterface;
+use Beubi\Importer\Product as ProductImporter;
+use Beubi\Handler\Product as ProductHandler;
+use Beubi\Manager\Product as ProductManager;
+use Beubi\Model\Product;
 ```
 
 better:
 
 ```php
 
-use Namshi\Inteface\ProductInterface;
-use Namshi\Importer\ProductImporter;
-use Namshi\Handler\ProductHandler;
-use Namshi\Manager\ProductManager;
-use Namshi\Model\Product;
+use Beubi\Inteface\ProductInterface;
+use Beubi\Importer\ProductImporter;
+use Beubi\Handler\ProductHandler;
+use Beubi\Manager\ProductManager;
+use Beubi\Model\Product;
 ```
 
 
@@ -372,14 +372,14 @@ From the [Symfony coding standards:](http://symfony.com/doc/current/contributing
 
 ``` yml
 
-namshi_rose.search.client:
-	class: Namshi\RoseBundle\Search\SolrSearch
+beubi_rose.search.client:
+	class: Beubi\RoseBundle\Search\SolrSearch
 	arguments:
 	    searchClient  :  @solarium.client
-	    avilableFacets:  '%namshi_rose.available_facets%'
+	    avilableFacets:  '%beubi_rose.available_facets%'
 	    shops         :  @shops
-	    locale        :  @namshi.locale
-	    availableSorts:  '%namshi_rose.solr_sort_options%'
+	    locale        :  @beubi.locale
+	    availableSorts:  '%beubi_rose.solr_sort_options%'
 	    logger         : @logger.solr
 
 ```
