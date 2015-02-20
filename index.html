@@ -4,32 +4,55 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title></title>
+        <title>Beubi CS!</title>
 
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/highlight.dark.css">
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="http://beubi.bitbucket.org/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://beubi.bitbucket.org/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://beubi.bitbucket.org/css/highlight.tomorrow-night.css">
+        <link rel="stylesheet" href="http://beubi.bitbucket.org/css/main.css">
     </head>
     <body>
 
         <header class="navbar navbar-default navbar-fixed-top">
 
-            <a class="navbar-brand" href="/">
-                The title
+            <a class="navbar-brand" href="http://beubi.bitbucket.org/">
+                Beubi CS!
                 <small class="hidden-xs hidden-sm">
-                    This is the default subtitle!
+                    This is a great project.
                 </small>
             </a>
 
             
         </header>
 
-        <main class="container">
+        <main class="container-fluid">
             <div class="row">
 
                 
-                <section id="content" class="col-sm-12">
+                    <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
+
+                                                    <p class="text-muted">
+                                Main documentation
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/index.html">
+                                            Home page
+                                        </a>
+                                    </li>
+                                                            </ul>
+                                                    <p class="text-muted">
+                                Other topics
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                            </ul>
+                        
+                    </nav>
+
+                
+                <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
                     <h1>PHP coding standards @Namshi</h1>
 <p>This guide describes the set of rules we apply at Namshi in our PHP codebase.</p>
 <h2>Formatting</h2>
@@ -446,17 +469,9 @@ or we don't expose the getter at all.</p>
             </div>
         </main>
 
-        <footer>
-            <div class="container">
-                <p class="text-muted">
-                    website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
-                </p>
-            </div>
-        </footer>
-
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="http://yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+        <script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
 
         <script>
             $(function() {
