@@ -113,6 +113,7 @@ Avoid aliasing objects with a `self` variable, as
 then it could lead to scope issues; prefer aliasing them
 with the service "name" instead.
 myObjectInstance
+
 ```javascript
 /**
  * User service.
@@ -273,6 +274,7 @@ Example: (assuming the following dir structure)
 ```
 
 and `config.js` (required by `app.js`) taking care of loading files from the `/appDir/src/config/` directory
+
 ```javascript
 /*config.js*/
 
@@ -290,6 +292,7 @@ var filePath = path.join(__dirname, './config/' + filename + '.yml');
 ```
 
 also a little preventive debug output might help out sys admins track eventual problems:
+
 ```javascript
 console.log('Loading config file: ', filePath);
 ```
@@ -297,6 +300,7 @@ console.log('Loading config file: ', filePath);
 as well as give a hint to your fellow devs if you really need a config file that needs to be created (or user [file-ensure](https://github.com/namshi/node-file-ensure)):
 
 Example: (assuming we need a `config/dev.yml` file)
+
 ```javascript
 try {
   /* your file opening stuff */

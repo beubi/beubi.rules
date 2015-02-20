@@ -1,6 +1,6 @@
 template:
     directory: website
-    url: https://github.com/CouscousPHP/Template-Dark.git
+    url: https://github.com/fonsecas72/wiki_template.git
 
 scripts:
     before:
@@ -18,19 +18,13 @@ title: Beubi CS!
 subTitle: This is a great project.
 
 menu:
-    sections:
-        main:
-            name: Main documentation
-            items:
-                home:
-                    text: Home page
-                    relativeUrl: index.html
-                phpcs:
-                    text: PHP CS
-                    relativeUrl: phpcs.html
-                jscs:
-                    text: JS CS
-                    relativeUrl: jscs.html
-        other:
-            name: Other topics
-            items:
+    items:
+        home:
+            text: Home page
+            relativeUrl: index.html
+        phpcs:
+            text: PHP CS
+            relativeUrl: phpcs.html
+        jscs:
+            text: JS CS
+            relativeUrl: jscs.html

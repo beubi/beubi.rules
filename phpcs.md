@@ -42,6 +42,7 @@ foreach ($array as $key => $value) {
 * PHP keywords MUST be in lower case. The PHP constants true, false, and null MUST be in lower case.
 
 * Exclamation mark in (negating operator) MUST be prepended and followed with one whitespace
+
 ```php
 
 if ( ! $item->available()) {
@@ -110,6 +111,7 @@ $e = new \Exception(sprintf("Can't find item %s with quantity %d", $itemNumber, 
 ## Class
 
 * Class names MUST be declared in [`StudlyCaps`](http://en.wikipedia.org/wiki/Studly_caps)
+
 ```php
 
 class Foo
@@ -233,6 +235,7 @@ $veryLongVariableNames2 = 100;
 ## Array
 
 * Arrays SHOULD be declared with short PHP syntax.
+
 ```php
 
 $array = [1, 2, 'foo' => 'bar',]
@@ -242,6 +245,7 @@ $array = [1, 2, 'foo' => 'bar',]
 * The last array argument should end with a comma
 
 * Long nested array MUST follow this format, indenting one tab:
+
 ```php
 
 $array = [
