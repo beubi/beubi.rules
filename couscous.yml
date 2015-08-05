@@ -31,3 +31,6 @@ menu:
         jscs:
             text: JS CS
             relativeUrl: jscs.html
+        sf2:
+            text: Sf2 Guideline
+            relativeUrl: sf2.html
