@@ -56,6 +56,56 @@
                                         Sf2 Guideline
                                     </a>
                                 </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Routing">
+                                        <span class="sub-menu">Routing</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Security">
+                                        <span class="sub-menu">Security</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Templating">
+                                        <span class="sub-menu">Templating</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Entities">
+                                        <span class="sub-menu">Entities</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Naming">
+                                        <span class="sub-menu">Naming</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Enumerations">
+                                        <span class="sub-menu">Enumerations</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Dates">
+                                        <span class="sub-menu">Dates</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#DataFixtures">
+                                        <span class="sub-menu">DataFixtures</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Forms">
+                                        <span class="sub-menu">Forms</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Testing">
+                                        <span class="sub-menu">Testing</span>
+                                    </a>
+                                </li>
                                                     </ul>
 
                     </nav>
@@ -63,7 +113,7 @@
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
                     <h1>Symfony2 Guideline</h1>
-<h2>Routing</h2>
+<h2><a name="Routing"></a>Routing</h2>
 <p>Routing is being configured through annotation like:</p>
 <pre><code>@Route("/something", name="somename")
 @Method("GET/POST/DELETE")</code></pre>
@@ -71,19 +121,19 @@
 <p>Parameter Conversion
 Whenever we have an id that is being pass to a controller as parameter but we want to use the class instead:</p>
 <pre><code>@ParamConverter("Classname", class="BeubiBundle:Classname", options={"id" = "thing-id"})</code></pre>
-<h2>Security</h2>
+<h2><a name="Security"></a>Security</h2>
 <p>Security rules are being used like this:</p>
 <pre><code>@Security("has_role('ROLE_AUTH')")</code></pre>
 <p>you can also</p>
 <pre><code>@Security("is_granted('edit', step)")</code></pre>
 <p>It can be used for a whole class or a single controller.
 And it must be present for every rout but &quot;/&quot; - homepage (login page)</p>
-<h2>Templating</h2>
+<h2><a name="Templating"></a>Templating</h2>
 <p>Templates are place under Resources/views and are injected in controllers as services.
 Their paths should be given like this:</p>
 <pre><code>@Template("BeubiBundle:Thing:index.html.twig")</code></pre>
 <p>This means that no controller should return Response, but an array instead.</p>
-<h2>Entities</h2>
+<h2><a name="Entities"></a>Entities</h2>
 <p>Documentation for gedmo extensions
 <a href="https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc">https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc</a>
 Documentation for doctrine
@@ -93,7 +143,7 @@ Documentation for doctrine
 @ORM\Id
 @ORM\Column(type=&quot;integer&quot;)
 @ORM\GeneratedValue(strategy=&quot;IDENTITY&quot;)</p>
-<h3>Timestampable fields / entities</h3>
+<h4>Timestampable fields / entities</h4>
 <p>You must create &quot;set&quot; methods of timestampable fields.
 This will improve testability and turn the creation of reallife like fixtures possible.</p>
 <h4>CreatedAt</h4>
@@ -137,30 +187,30 @@ public function setDeletedAt(\DateTime $deletedAt)
     $this-&gt;deletedAt = $deletedAt;
     return $this;
 }</code></pre>
-<p>Making sure a field match a string</p>
+<h4>Making sure a field match a string</h4>
 <pre><code>@Assert\Choice(callback={"Beubi\Bundle\Provider\ThingProvider","getThingTypeKeyChoices"})</code></pre>
-<p>Strings
-Each string field should have the minimum necessary length.
+<h4>Strings</h4>
+<p>Each string field should have the minimum necessary length.
 When it is not possible to know this minimum length use:
 medium size strings should be like (e.g. used in input field):</p>
 <pre><code> @ORM\Column(type="string", length=200)</code></pre>
 <p>the biggest size strings should be like  (e.g. used in textarea field):</p>
 <pre><code> @ORM\Column(type="string", length=255)</code></pre>
-<p>Files
-When uploading files to register that in db we are placing this</p>
+<h4>Files</h4>
+<p>When uploading files to register that in db we are placing this</p>
 <pre><code>@Vich\Uploadable</code></pre>
 <p>in the entity, and then this</p>
 <pre><code>@Assert\File(maxSize="5M", mimeTypes = {"application/pdf", "application/x-pdf"})</code></pre>
 <p>At <code>$file</code> property where we are asserting file max-size and mime-types</p>
-<p>Inheritances
-We must use when the target tables are alike</p>
+<h4>Inheritances</h4>
+<p>We must use when the target tables are alike</p>
 <pre><code>@ORM\InheritanceType("JOINED")
 @ORM\DiscriminatorMap({"Thing" = "Thing", "AnotherThing" = "AnotherThing")</code></pre>
 <p>And</p>
 <pre><code>@ORM\InheritanceType("SINGLE_TABLE")
 @ORM\DiscriminatorMap({"file" = "File", "attachment" = "Attachment", "photo" = "Photo"})</code></pre>
 <p>When target tables are different from each other (e.g. from Intervener and Attachment)</p>
-<h2>Naming</h2>
+<h2><a name="Naming"></a>Naming</h2>
 <h3>Variables</h3>
 <p><em>Prohibited</em> names for variables;
 <code>form</code>
@@ -216,7 +266,8 @@ e.g. &quot;whoCheckedTheBuilding&quot; ~&gt; &quot;Quem realizou o levantamento?
 </ul>
 <p>Entity creation and behavior</p>
 <p>It must not be possible to create an &quot;invalid&quot; Entity.</p>
-<h2>Roles</h2>
+<h2><a name="Security"></a>Security</h2>
+<h3><a name="Roles"></a>Roles</h3>
 <p>Symfony documentation about security component
 <a href="http://symfony.com/doc/current/book/security.html">http://symfony.com/doc/current/book/security.html</a></p>
 <table>
@@ -396,7 +447,7 @@ Check if the voter supports the class of the object whose access is being checke
 </ul></li>
 </ul>
 <p><a href="http://symfony.com/doc/current/cookbook/security/voters_data_permission.html#creating-the-custom-voter">http://symfony.com/doc/current/cookbook/security/voters_data_permission.html#creating-the-custom-voter</a></p>
-<h2>Enumerations (choices)</h2>
+<h2><a name="Enumerations"></a>Enumerations (choices)</h2>
 <p>A provider must be created for each enumeration.
 This provider must have one constant properties for each possible choice and an array calling this constants.
 This provider must implement a getTypeChoices() method which will return the possible choices.
@@ -419,16 +470,16 @@ This provider should be Abstract and should be injected when needed.</p>
 }</code></pre>
 <p>These providers can be used e.g. within an Entity to assert values (@Assert\Choice) or a form to add choices.
 ThingProvider::getTypeChoices()</p>
-<h2>Dates</h2>
-<p>All dates should be in &lt;<Day>&gt; &lt;<Month>&gt; &lt;<Year>&gt; format.
-Localized dates: {{ process.createdAt | localizeddate('medium', 'none') }}
-reference: <a href="http://twig.sensiolabs.org/doc/extensions/intl.html">http://twig.sensiolabs.org/doc/extensions/intl.html</a></p>
-<h2>Data Fixtures</h2>
+<h2><a name="Dates"></a>Dates</h2>
+<p>All dates should be in <code>&lt;&lt;Day&gt;&gt;</code> <code>&lt;&lt;Month&gt;&gt;</code> <code>&lt;&lt;Year&gt;&gt;</code> format.</p>
+<p>Localized dates: <code>{{ entity.createdAt | localizeddate('medium', 'none') }}</code></p>
+<p>reference: <a href="http://twig.sensiolabs.org/doc/extensions/intl.html">http://twig.sensiolabs.org/doc/extensions/intl.html</a></p>
+<h2><a name="DataFixtures"></a>Data Fixtures</h2>
 <p>One load data fixtures class should not load more than one entity.
 A method &quot;create…&quot; should be implemented in order to create an entity.
 e.g. createUser()
 A class &quot;DataFixture&quot; should be created from which every loading fixtures responsible classes should extend.</p>
-<h2>Forms</h2>
+<h2><a name="Forms"></a>Forms</h2>
 <h3>Dynamic Forms</h3>
 <p><a href="http://symfony.com/doc/current/cookbook/form/dynamic_form_modification.html">http://symfony.com/doc/current/cookbook/form/dynamic_form_modification.html</a></p>
 <h3>Change forms</h3>
@@ -460,7 +511,7 @@ The trick to update the form using ajax, is just ask the form if the button was 
 <pre><code>if ($form-&gt;get('save')-&gt;isClicked() &amp;&amp; $form-&gt;isValid()) {</code></pre>
 <h3>Form Events</h3>
 <p><a href="http://symfony.com/doc/current/components/form/form_events.html">http://symfony.com/doc/current/components/form/form_events.html</a></p>
-<h2>Testing</h2>
+<h2><a name="Testing"></a>Testing</h2>
 <p>We will have blackbox and whitebox tests.</p>
 <p>Blackbox tests may be using crawler and database.</p>
 <p>Whitebox tests will be using behat+mink+something and will &quot;always&quot; use database.</p>
