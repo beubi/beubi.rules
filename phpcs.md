@@ -8,7 +8,7 @@ This guide describes the set of rules we apply at Beubi in our PHP codebase.
 
 ## Formatting
 
-We mostly follow the [PSR-2 standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
+We mostly follow the [PSR-2 standard](http://www.php-fig.org/psr/psr-2/)
 
 * Files MUST use only <?php tag at the beginning, no ?> at the end
 
