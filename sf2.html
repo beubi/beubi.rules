@@ -67,11 +67,6 @@
                                     </a>
                                 </li>
                                                             <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Security">
-                                        <span class="sub-menu">Security</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
                                     <a href="http://beubi.bitbucket.org/sf2.html#Templating">
                                         <span class="sub-menu">Templating</span>
                                     </a>
@@ -84,6 +79,11 @@
                                                             <li class="">
                                     <a href="http://beubi.bitbucket.org/sf2.html#Naming">
                                         <span class="sub-menu">Naming</span>
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/sf2.html#Security">
+                                        <span class="sub-menu">Security</span>
                                     </a>
                                 </li>
                                                             <li class="">
@@ -126,13 +126,6 @@
 <p>Parameter Conversion
 Whenever we have an id that is being pass to a controller as parameter but we want to use the class instead:</p>
 <pre><code>@ParamConverter("Classname", class="BeubiBundle:Classname", options={"id" = "thing-id"})</code></pre>
-<h2><a name="Security"></a>Security</h2>
-<p>Security rules are being used like this:</p>
-<pre><code>@Security("has_role('ROLE_AUTH')")</code></pre>
-<p>you can also</p>
-<pre><code>@Security("is_granted('edit', step)")</code></pre>
-<p>It can be used for a whole class or a single controller.
-And it must be present for every rout but &quot;/&quot; - homepage (login page)</p>
 <h2><a name="Templating"></a>Templating</h2>
 <p>Templates are place under Resources/views and are injected in controllers as services.
 Their paths should be given like this:</p>
@@ -217,12 +210,12 @@ medium size strings should be like (e.g. used in input field):</p>
 <p>When target tables are different from each other (e.g. from Intervener and Attachment)</p>
 <h2><a name="Naming"></a>Naming</h2>
 <h3>Variables</h3>
-<p><em>Prohibited</em> names for variables;
+<p><strong>Prohibited</strong> names for variables;
 <code>form</code>
 <code>entity</code></p>
 <h3>Controller methods</h3>
 <p>Every controller method must end with &quot;Action&quot;</p>
-<p><em>Standard controller actions</em>
+<p><strong>Standard controller actions</strong>
 <code>index</code>
 the main method of a controller
 <code>edit</code>
@@ -244,13 +237,13 @@ returns view with form</p>
 Names of method that changes a property must start with &quot;set...&quot;
 Names of method that returns a property must start with &quot;get...&quot;</p>
 <h3>Entity properties</h3>
-<p>Properties must be in english.
+<p>Properties must be in English.
 No abbreviations are allowed.
 When properties are ManyToOne relations they should match the class name.
 e.g. &quot;user&quot;
 When properties are OneToMany relations they should match the class name and be in plural.
 e.g. &quot;attachments&quot;
-When needed, doc block should have the field name in portuguese.
+When needed, doc block should have the field name in Portuguese.
 e.g. &quot;whoCheckedTheBuilding&quot; ~&gt; &quot;Quem realizou o levantamento?&quot;</p>
 <p>Word list</p>
 <ul>
@@ -272,162 +265,24 @@ e.g. &quot;whoCheckedTheBuilding&quot; ~&gt; &quot;Quem realizou o levantamento?
 <p>Entity creation and behavior</p>
 <p>It must not be possible to create an &quot;invalid&quot; Entity.</p>
 <h2><a name="Security"></a>Security</h2>
+<p>Security rules are being used like this:</p>
+<pre><code>@Security("has_role('ROLE_AUTH')")</code></pre>
+<p>you can also</p>
+<pre><code>@Security("is_granted('edit', step)")</code></pre>
+<p>It can be used for a whole class or a single controller.
+And it must be present for every rout but &quot;/&quot; - homepage (login page)</p>
 <h3><a name="Roles"></a>Roles</h3>
 <p>Symfony documentation about security component
 <a href="http://symfony.com/doc/current/book/security.html">http://symfony.com/doc/current/book/security.html</a></p>
-<table>
-<thead>
-<tr>
-<th>ROLE NAME (ROLE<em><service.name></em><RIGHT>)</th>
-<th>Descrição</th>
-<th>Object-Scope</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ROLE_PROCESS_CANCEL</td>
-<td>Cancelar o processo</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_PROCESS_CHANGE_RESPONSIBLE_SOLICITOR</td>
-<td>Alterar o solicitador responsável do processo</td>
-<td>admin</td>
-</tr>
-<tr>
-<td>ROLE_PROCESS_SEARCH_BY_ALL_SOLICITOR</td>
-<td>Pesquisa por diferentes solicitadores</td>
-<td>admin</td>
-</tr>
-<tr>
-<td>ROLE_CONFIGURATION_ACCESS</td>
-<td>Aceder ao interface de configurações</td>
-<td>admin</td>
-</tr>
-<tr>
-<td>ROLE_DOCUMENT_DELETE</td>
-<td>Apagar documentos</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_NOTE_DELETE</td>
-<td>Apagar notas</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_PHOTO_DELETE</td>
-<td>Apagar fotos</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_TITULAR_EDIT</td>
-<td>Alterar o titular</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_TITULAR_DELETE</td>
-<td>Apagar titular</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_PRESENT_EDIT</td>
-<td>Editar presente</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_PRESENT_DELETE</td>
-<td>Apagar presente</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_REPRESENTATIVE_EDIT</td>
-<td>Editar representante</td>
-<td>próprio ou admin</td>
-</tr>
-<tr>
-<td>ROLE_REPRESENTATIVE_DELETE</td>
-<td>Apagar representante</td>
-<td>próprio ou admin</td>
-</tr>
-</tbody>
-</table>
-<h3>Hierarchy</h3>
-<table>
-<thead>
-<tr>
-<th>ROLE_ADMIN</th>
-<th>ROLE_SOLICITADOR</th>
-<th>ROLE_REQUERENTE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ROLE_PROCESS_CANCEL</td>
-<td>ROLE_CONFIGURATION_ACCESS</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_PROCESS_CHANGE_RESPONSIBLE_SOLICITOR</td>
-<td>ROLE_NOTE_DELETE</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_PROCESS_SEARCH_BY_ALL_SOLICITOR</td>
-<td>ROLE_PHOTO_DELETE</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_CONFIGURATION_ACCESS</td>
-<td>ROLE_TITULAR_EDIT</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_DOCUMENT_DELETE</td>
-<td>ROLE_TITULAR_DELETE</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_NOTE_DELETE</td>
-<td>ROLE_PRESENT_EDIT</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_PHOTO_DELETE</td>
-<td>ROLE_PRESENT_DELETE</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_TITULAR_EDIT</td>
-<td>ROLE<em>REPRESENTATIVE</em> EDIT</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_TITULAR_DELETE</td>
-<td>ROLE<em>REPRESENTATIVE</em> DELETE</td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_PRESENT_EDIT</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_PRESENT_DELETE</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_REPRESENTATIVE_EDIT</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ROLE_REPRESENTATIVE_DELETE</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>We should use names like:</p>
+<ul>
+<li>ROLE_THING_CANCEL                          |</li>
+<li>ROLE_THING_CHANGE_ANOTHERTHING</li>
+<li>ROLE_SEARCH_BY_THING</li>
+<li>ROLE_THING_ACCESS</li>
+<li>ROLE_THING_EDIT</li>
+<li>ROLE_THING_DELETE                          </li>
+</ul>
 <h3>Use examples</h3>
 <p>Calling service</p>
 <pre><code>$this-&gt;container-&gt;get('security.context')-&gt;isGranted('ROLE_AUTH')</code></pre>
