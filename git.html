@@ -36,7 +36,7 @@
                     <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
 
                         <ul class="nav nav-pills nav-stacked">
-                                                            <li class="active">
+                                                            <li class="">
                                     <a href="http://beubi.bitbucket.org/index.html">
                                         Home page
                                     </a>
@@ -51,7 +51,7 @@
                                         JS CS
                                     </a>
                                 </li>
-                                                            <li class="">
+                                                            <li class="active">
                                     <a href="http://beubi.bitbucket.org/git.html">
                                         Version control system - Git
                                     </a>
@@ -117,8 +117,19 @@
 
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1>Coding standards</h1>
-<p>In this repo we collect the guidelines we use when writing code and, more importantly, design software at Beubi.</p>
+                    <h1>Version control system - Git</h1>
+<h3>When creating implementing a new feature you MUST create a branch with the following signature:</h3>
+<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt;</code></pre>
+<p><strong>You can easily get this by using JIRA: Just use the &quot;Create branch&quot; link at the Issue page.</strong></p>
+<h3>Every commit MUST have the following signature:</h3>
+<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) commit description&gt;&gt;</code></pre>
+<p><strong>You can just copy the branch name to speedup this process.</strong></p>
+<p>When your branch is ready, make a pull request using bitbucket. Just go to &quot;Create Pull Request&quot; and choose your branch as source and &quot;develop&quot; as destination.</p>
+<p><em>At the time, when you commit, you'll see a link that you can also use to achieve this.</em></p>
+<h3>The Pull Request (PR) message MUST have the following signature</h3>
+<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) short description&gt;&gt;</code></pre>
+<p><strong>If you follow this principles the message should be automatically filled for you</strong></p>
+<p>When you're done you can click at &quot;Create pull request&quot; button.</p>
                 </section>
 
             </div>
