@@ -31,6 +31,9 @@ menu:
         jscs:
             text: JS CS
             relativeUrl: jscs.html
+        git:
+            text: Version control system - Git
+            relativeUrl: git.html
         sf2:
             text: Sf2 Guideline
             relativeUrl: sf2.html
