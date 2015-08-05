@@ -4,7 +4,7 @@ currentMenu: sf2
 
 # Symfony2 Guideline
 
-## Routing
+## <a name="Routing"></a>Routing
 
 Routing is being configured through annotation like:
 ```
@@ -19,7 +19,7 @@ Whenever we have an id that is being pass to a controller as parameter but we wa
 @ParamConverter("Classname", class="BeubiBundle:Classname", options={"id" = "thing-id"})
 ```
 
-## Security
+## <a name="Security"></a>Security
 
 Security rules are being used like this:
 ```
@@ -32,7 +32,7 @@ you can also
 It can be used for a whole class or a single controller.
 And it must be present for every rout but "/" - homepage (login page)
 
-## Templating
+## <a name="Templating"></a>Templating
 
 Templates are place under Resources/views and are injected in controllers as services.
 Their paths should be given like this:
@@ -41,7 +41,7 @@ Their paths should be given like this:
 ```
 This means that no controller should return Response, but an array instead.
 
-## Entities
+## <a name="Entities"></a>Entities
 
 Documentation for gedmo extensions
 https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc
@@ -55,7 +55,7 @@ IDs must be like
 @ORM\Column(type="integer")
 @ORM\GeneratedValue(strategy="IDENTITY")
 
-### Timestampable fields / entities
+#### Timestampable fields / entities
 You must create "set" methods of timestampable fields.
 This will improve testability and turn the creation of reallife like fixtures possible.
 
@@ -118,11 +118,11 @@ public function setDeletedAt(\DateTime $deletedAt)
 }
 ```
 
-Making sure a field match a string
+#### Making sure a field match a string
 ```
 @Assert\Choice(callback={"Beubi\Bundle\Provider\ThingProvider","getThingTypeKeyChoices"})
 ```
-Strings
+#### Strings
 Each string field should have the minimum necessary length.
 When it is not possible to know this minimum length use:
 medium size strings should be like (e.g. used in input field):
@@ -134,7 +134,7 @@ the biggest size strings should be like  (e.g. used in textarea field):
  @ORM\Column(type="string", length=255)
 ```
 
-Files
+#### Files
 When uploading files to register that in db we are placing this
 ```
 @Vich\Uploadable
@@ -145,7 +145,7 @@ in the entity, and then this
 ```
 At `$file` property where we are asserting file max-size and mime-types
 
-Inheritances
+#### Inheritances
 We must use when the target tables are alike
 ```
 @ORM\InheritanceType("JOINED")
@@ -158,7 +158,7 @@ And
 ```
 When target tables are different from each other (e.g. from Intervener and Attachment)
 
-## Naming
+## <a name="Naming"></a>Naming
 
 ### Variables
 *Prohibited* names for variables;
@@ -222,7 +222,9 @@ Entity creation and behavior
 
 It must not be possible to create an "invalid" Entity.
 
-## Roles
+## <a name="Security"></a>Security
+
+### <a name="Roles"></a>Roles
 
 Symfony documentation about security component
 http://symfony.com/doc/current/book/security.html
@@ -289,7 +291,7 @@ Check if the voter supports the class of the object whose access is being checke
 
 http://symfony.com/doc/current/cookbook/security/voters_data_permission.html#creating-the-custom-voter
 
-## Enumerations (choices)
+## <a name="Enumerations"></a>Enumerations (choices)
 
 A provider must be created for each enumeration.
 This provider must have one constant properties for each possible choice and an array calling this constants.
@@ -318,19 +320,22 @@ class ThingProvider
 These providers can be used e.g. within an Entity to assert values (@Assert\Choice) or a form to add choices.
 ThingProvider::getTypeChoices()
 
-## Dates
+## <a name="Dates"></a>Dates
 
-All dates should be in <<Day>> <<Month>> <<Year>> format.
-Localized dates: {{ process.createdAt | localizeddate('medium', 'none') }}
+All dates should be in `<<Day>>` `<<Month>>` `<<Year>>` format.
+
+Localized dates: `{{ entity.createdAt | localizeddate('medium', 'none') }}`
+
 reference: http://twig.sensiolabs.org/doc/extensions/intl.html
 
-## Data Fixtures
+## <a name="DataFixtures"></a>Data Fixtures
+
 One load data fixtures class should not load more than one entity.
 A method "create…" should be implemented in order to create an entity.
 e.g. createUser()
 A class "DataFixture" should be created from which every loading fixtures responsible classes should extend.
 
-## Forms
+## <a name="Forms"></a>Forms
 
 ### Dynamic Forms
 http://symfony.com/doc/current/cookbook/form/dynamic_form_modification.html
@@ -374,7 +379,7 @@ if ($form->get('save')->isClicked() && $form->isValid()) {
 ### Form Events
 http://symfony.com/doc/current/components/form/form_events.html
 
-## Testing
+## <a name="Testing"></a>Testing
 
 We will have blackbox and whitebox tests.
 
