@@ -40,9 +40,6 @@ menu:
         sf2.routing:
             text: "<span class=\"sub-menu\">Routing</span>"
             relativeUrl: sf2.html#Routing
-        sf2.security:
-            text: "<span class=\"sub-menu\">Security</span>"
-            relativeUrl: sf2.html#Security
         sf2.templating:
             text: "<span class=\"sub-menu\">Templating</span>"
             relativeUrl: sf2.html#Templating

@@ -19,19 +19,6 @@ Whenever we have an id that is being pass to a controller as parameter but we wa
 @ParamConverter("Classname", class="BeubiBundle:Classname", options={"id" = "thing-id"})
 ```
 
-## <a name="Security"></a>Security
-
-Security rules are being used like this:
-```
-@Security("has_role('ROLE_AUTH')")
-```
-you can also
-```
-@Security("is_granted('edit', step)")
-```
-It can be used for a whole class or a single controller.
-And it must be present for every rout but "/" - homepage (login page)
-
 ## <a name="Templating"></a>Templating
 
 Templates are place under Resources/views and are injected in controllers as services.
@@ -161,14 +148,14 @@ When target tables are different from each other (e.g. from Intervener and Attac
 ## <a name="Naming"></a>Naming
 
 ### Variables
-*Prohibited* names for variables;
+**Prohibited** names for variables;
 `form`
 `entity`
 
 ### Controller methods
 Every controller method must end with "Action"
 
-*Standard controller actions*
+**Standard controller actions**
 `index`
 the main method of a controller
 `edit`
@@ -193,13 +180,13 @@ Names of method that changes a property must start with "set..."
 Names of method that returns a property must start with "get..."
 
 ### Entity properties
-Properties must be in english.
+Properties must be in English.
 No abbreviations are allowed.
 When properties are ManyToOne relations they should match the class name.
 e.g. "user"
 When properties are OneToMany relations they should match the class name and be in plural.
 e.g. "attachments"
-When needed, doc block should have the field name in portuguese.
+When needed, doc block should have the field name in Portuguese.
 e.g. "whoCheckedTheBuilding" ~> "Quem realizou o levantamento?"
 
 Word list
@@ -224,46 +211,30 @@ It must not be possible to create an "invalid" Entity.
 
 ## <a name="Security"></a>Security
 
+Security rules are being used like this:
+```
+@Security("has_role('ROLE_AUTH')")
+```
+you can also
+```
+@Security("is_granted('edit', step)")
+```
+It can be used for a whole class or a single controller.
+And it must be present for every rout but "/" - homepage (login page)
+
 ### <a name="Roles"></a>Roles
 
 Symfony documentation about security component
 http://symfony.com/doc/current/book/security.html
 
-| ROLE NAME (ROLE_<service.name>_<RIGHT>)    | Descrição                                     | Object-Scope     |
-|--------------------------------------------|-----------------------------------------------|------------------|
-| ROLE_PROCESS_CANCEL                        | Cancelar o processo                           | próprio ou admin |
-| ROLE_PROCESS_CHANGE_RESPONSIBLE_SOLICITOR  | Alterar o solicitador responsável do processo | admin            |
-| ROLE_PROCESS_SEARCH_BY_ALL_SOLICITOR       | Pesquisa por diferentes solicitadores         | admin            |
-| ROLE_CONFIGURATION_ACCESS                  | Aceder ao interface de configurações          | admin            |
-| ROLE_DOCUMENT_DELETE                       | Apagar documentos                             | próprio ou admin |
-| ROLE_NOTE_DELETE                           | Apagar notas                                  | próprio ou admin |
-| ROLE_PHOTO_DELETE                          | Apagar fotos                                  | próprio ou admin |
-| ROLE_TITULAR_EDIT                          | Alterar o titular                             | próprio ou admin |
-| ROLE_TITULAR_DELETE                        | Apagar titular                                | próprio ou admin |
-| ROLE_PRESENT_EDIT                          | Editar presente                               | próprio ou admin |
-| ROLE_PRESENT_DELETE                        | Apagar presente                               | próprio ou admin |
-| ROLE_REPRESENTATIVE_EDIT                   | Editar representante                          | próprio ou admin |
-| ROLE_REPRESENTATIVE_DELETE                 | Apagar representante                          | próprio ou admin |
+We should use names like:
 
-
-### Hierarchy
-
-| ROLE_ADMIN                                 | ROLE_SOLICITADOR            | ROLE_REQUERENTE |
-|--------------------------------------------|-----------------------------|-----------------|
-| ROLE_PROCESS_CANCEL                        | ROLE_CONFIGURATION_ACCESS   |                 |
-| ROLE_PROCESS_CHANGE_RESPONSIBLE_SOLICITOR  | ROLE_NOTE_DELETE            |                 |
-| ROLE_PROCESS_SEARCH_BY_ALL_SOLICITOR       | ROLE_PHOTO_DELETE           |                 |
-| ROLE_CONFIGURATION_ACCESS                  | ROLE_TITULAR_EDIT           |                 |
-| ROLE_DOCUMENT_DELETE                       | ROLE_TITULAR_DELETE         |                 |
-| ROLE_NOTE_DELETE                           | ROLE_PRESENT_EDIT           |                 |
-| ROLE_PHOTO_DELETE                          | ROLE_PRESENT_DELETE         |                 |
-| ROLE_TITULAR_EDIT                          | ROLE_REPRESENTATIVE_ EDIT   |                 |
-| ROLE_TITULAR_DELETE                        | ROLE_REPRESENTATIVE_ DELETE |                 |
-| ROLE_PRESENT_EDIT                          |                             |                 |
-| ROLE_PRESENT_DELETE                        |                             |                 |
-| ROLE_REPRESENTATIVE_EDIT                   |                             |                 |
-| ROLE_REPRESENTATIVE_DELETE                 |                             |                 |
-
+* ROLE_THING_CANCEL                          |
+* ROLE_THING_CHANGE_ANOTHERTHING
+* ROLE_SEARCH_BY_THING
+* ROLE_THING_ACCESS
+* ROLE_THING_EDIT
+* ROLE_THING_DELETE                          
 
 ### Use examples
 
