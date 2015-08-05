@@ -34,6 +34,9 @@ menu:
         git:
             text: Version control system - Git
             relativeUrl: git.html
+        composer:
+            text: Composer
+            relativeUrl: composer.html
         sf2:
             text: Sf2 Guideline
             relativeUrl: sf2.html
