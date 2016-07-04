@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Beubi CS!</title>
+        <title>Beubi&#039;s Technical Documentation</title>
 
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/font-awesome.min.css">
@@ -16,16 +16,12 @@
         <header class="navbar navbar-default navbar-fixed-top">
 
             <a class="navbar-brand" href="http://beubi.bitbucket.org/">
-                <img src="http://beubi.com/bundles/beubiwebsite/images/logo.png" style="height: 40px;display: inline;">
-                Beubi CS!
+                Beubi&#039;s Technical Documentation
                 <small class="hidden-xs hidden-sm">
-                    This is a great project.
+                     
                 </small>
             </a>
 
-                            <a href="https://bitbucket.org/beubi/beubi.bitbucket.org">
-                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://www.robert-king.com/images/forkme.png" alt="Fork me on Bitbucket" data-canonical-src="http://www.robert-king.com/images/forkme.png">
-                </a>
             
         </header>
 
@@ -38,7 +34,12 @@
                         <ul class="nav nav-pills nav-stacked">
                                                             <li class="">
                                     <a href="http://beubi.bitbucket.org/index.html">
-                                        Home page
+                                        Introduction
+                                    </a>
+                                </li>
+                                                            <li class="active">
+                                    <a href="http://beubi.bitbucket.org/git.html">
+                                        Version control system - Git
                                     </a>
                                 </li>
                                                             <li class="">
@@ -51,11 +52,6 @@
                                         JS CS
                                     </a>
                                 </li>
-                                                            <li class="active">
-                                    <a href="http://beubi.bitbucket.org/git.html">
-                                        Version control system - Git
-                                    </a>
-                                </li>
                                                             <li class="">
                                     <a href="http://beubi.bitbucket.org/composer.html">
                                         Composer
@@ -66,72 +62,53 @@
                                         Sf2 Guideline
                                     </a>
                                 </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Routing">
-                                        <span class="sub-menu">Routing</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Templating">
-                                        <span class="sub-menu">Templating</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Entities">
-                                        <span class="sub-menu">Entities</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Naming">
-                                        <span class="sub-menu">Naming</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Security">
-                                        <span class="sub-menu">Security</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Enumerations">
-                                        <span class="sub-menu">Enumerations</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Dates">
-                                        <span class="sub-menu">Dates</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#DataFixtures">
-                                        <span class="sub-menu">DataFixtures</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Forms">
-                                        <span class="sub-menu">Forms</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Testing">
-                                        <span class="sub-menu">Testing</span>
-                                    </a>
-                                </li>
                                                     </ul>
 
                     </nav>
 
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1>Version control system - Git</h1>
-<h3>When creating implementing a new feature you MUST create a branch with the following signature:</h3>
-<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt;</code></pre>
-<p><strong>You can easily get this by using JIRA: Just use the &quot;Create branch&quot; link at the Issue page.</strong></p>
-<h3>Every commit MUST have the following signature:</h3>
-<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) commit description&gt;&gt;</code></pre>
-<p><strong>You can just copy the branch name to speedup this process.</strong></p>
-<p>When your branch is ready, make a pull request using bitbucket. Just go to &quot;Create Pull Request&quot; and choose your branch as source and &quot;develop&quot; as destination.</p>
-<p><em>At the time, when you commit, you'll see a link that you can also use to achieve this.</em></p>
-<h3>The Pull Request (PR) message MUST have the following signature</h3>
+                    <h1 id="version-control-system---git">Version control system - Git</h1>
+<h4 id="when-creatingimplementing-a-new-feature-you-must">When creating/implementing a new feature, you MUST:</h4>
+<ul>
+<li>create the branch from &quot;develop&quot;</li>
+<li>use Git Flow nomenclature (e.g. “feature/”)</li>
+<li>add the project code in upper case (e.g. &quot;IMFQE-XXX&quot;)</li>
+<li>review the summary discription manually </li>
+</ul>
+<pre><code>&lt;&lt;Git Flow tag&gt;&gt;/&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA Issue summary (~30 letters)&gt;&gt;
+
+Ex.: feature/IMFQE-999-docker-support</code></pre>
+<p><em>Tip: You can easily do this, in your web browser, by using <a href="https://ubiprism.atlassian.net">JIRA</a>. Just use the &quot;Create branch&quot; link at the Issue page and follow the steps.</em></p>
+<h4 id="knowing-this-there-are-some-other-recommendations-that-you-should-follow-regarding-issue-management">Knowing this, there are some other recommendations that you should follow, regarding issue management:</h4>
+<ul>
+<li>the Assignee (the one to whom the issue resolution is assigned) is responsible for the timely progress of the issue</li>
+<li>if relevant, changes to provisioning, migrations, tests or README should be included</li>
+<li>avoid having multiple issues with 'Development' status</li>
+</ul>
+<h4 id="on-the-subject-of-creating-new-commits-every-commit-must-respect-the-following-structure">On the subject of creating new commits, every commit MUST respect the following structure:</h4>
+<ul>
+<li>a title is required, with a blank line separating the (optional) discription</li>
+<li>titles should be in the format &quot;PROJECTCODE-ISSUENUMBER Some title&quot;</li>
+<li>the description should begin with “If applied, this commit will ... “ or an equivalent expression</li>
+<li>it should not exceed 72 characters</li>
+</ul>
+<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt; &lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) commit description&gt;&gt;
+
+Ex.: IMFQE-999 Implemented docker support</code></pre>
+<p><em>Tip: You can just copy the branch name to speedup this process.</em></p>
+<h4 id="knowing-this-there-are-some-other-recommendations-that-you-should-follow-regarding-commit-management">Knowing this, there are some other recommendations that you should follow, regarding commit management:</h4>
+<ul>
+<li>do some self code-review before opening a new pull-request</li>
+<li>the &quot;resolve&quot; mindset is diferent from “review”</li>
+<li>it can be done online, on Bitbucket, or using “git diff develop”</li>
+<li>every line should be useful to the resolution of the issue at hand</li>
+<li>remove mistakenly introduced code (e.g. spaces)</li>
+<li>avoid 'Since I'm here..&quot; corrections, they should be left to other issues</li>
+</ul>
+<h4 id="when-your-branch-is-ready-make-a-pull-request-using-bitbucket-just-go-to-quotcreate-pull-requestquot-and-choose-your-branch-as-source-and-quotdevelopquot-as-destination">When your branch is ready, make a pull request using Bitbucket. Just go to &quot;Create Pull Request&quot; and choose your branch as source and &quot;develop&quot; as destination.</h4>
+<p><em>Tip: If you are using a command-line interface terminal, at the time you commit, you'll see a link that you can also use to achieve this.</em></p>
+<h3 id="the-pull-request-pr-message-must-have-the-following-signature">The Pull Request (PR) message MUST have the following signature</h3>
 <pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) short description&gt;&gt;</code></pre>
 <p><strong>If you follow this principles the message should be automatically filled for you</strong></p>
 <p>When you're done you can click at &quot;Create pull request&quot; button.</p>
@@ -150,7 +127,7 @@
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="http://yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
 
         <script>
             $(function() {

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Beubi CS!</title>
+        <title>Beubi&#039;s Technical Documentation</title>
 
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/font-awesome.min.css">
@@ -16,16 +16,12 @@
         <header class="navbar navbar-default navbar-fixed-top">
 
             <a class="navbar-brand" href="http://beubi.bitbucket.org/">
-                <img src="http://beubi.com/bundles/beubiwebsite/images/logo.png" style="height: 40px;display: inline;">
-                Beubi CS!
+                Beubi&#039;s Technical Documentation
                 <small class="hidden-xs hidden-sm">
-                    This is a great project.
+                     
                 </small>
             </a>
 
-                            <a href="https://bitbucket.org/beubi/beubi.bitbucket.org">
-                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://www.robert-king.com/images/forkme.png" alt="Fork me on Bitbucket" data-canonical-src="http://www.robert-king.com/images/forkme.png">
-                </a>
             
         </header>
 
@@ -38,7 +34,12 @@
                         <ul class="nav nav-pills nav-stacked">
                                                             <li class="">
                                     <a href="http://beubi.bitbucket.org/index.html">
-                                        Home page
+                                        Introduction
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/git.html">
+                                        Version control system - Git
                                     </a>
                                 </li>
                                                             <li class="">
@@ -52,11 +53,6 @@
                                     </a>
                                 </li>
                                                             <li class="">
-                                    <a href="http://beubi.bitbucket.org/git.html">
-                                        Version control system - Git
-                                    </a>
-                                </li>
-                                                            <li class="">
                                     <a href="http://beubi.bitbucket.org/composer.html">
                                         Composer
                                     </a>
@@ -66,63 +62,13 @@
                                         Sf2 Guideline
                                     </a>
                                 </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Routing">
-                                        <span class="sub-menu">Routing</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Templating">
-                                        <span class="sub-menu">Templating</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Entities">
-                                        <span class="sub-menu">Entities</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Naming">
-                                        <span class="sub-menu">Naming</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Security">
-                                        <span class="sub-menu">Security</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Enumerations">
-                                        <span class="sub-menu">Enumerations</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Dates">
-                                        <span class="sub-menu">Dates</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#DataFixtures">
-                                        <span class="sub-menu">DataFixtures</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Forms">
-                                        <span class="sub-menu">Forms</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Testing">
-                                        <span class="sub-menu">Testing</span>
-                                    </a>
-                                </li>
                                                     </ul>
 
                     </nav>
 
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1>Symfony2 Guideline</h1>
+                    <h1 id="symfony2-guideline">Symfony2 Guideline</h1>
 <h2><a name="Routing"></a>Routing</h2>
 <p>Routing is being configured through annotation like:</p>
 <pre><code>@Route("/something", name="somename")
@@ -146,10 +92,10 @@ Documentation for doctrine
 @ORM\Id
 @ORM\Column(type=&quot;integer&quot;)
 @ORM\GeneratedValue(strategy=&quot;IDENTITY&quot;)</p>
-<h4>Timestampable fields / entities</h4>
+<h4 id="timestampable-fields--entities">Timestampable fields / entities</h4>
 <p>You must create &quot;set&quot; methods of timestampable fields.
 This will improve testability and turn the creation of reallife like fixtures possible.</p>
-<h4>CreatedAt</h4>
+<h4 id="createdat">CreatedAt</h4>
 <p>&quot;createdAt&quot; property should be set in constructor through &quot;setCreatedAt&quot; method like:</p>
 <pre><code>public function __construct()
 {
@@ -161,7 +107,7 @@ This will improve testability and turn the creation of reallife like fixtures po
         $this-&gt;createdAt = $createdAt;
         return $this;
 }</code></pre>
-<h4>UpdatedAt</h4>
+<h4 id="updatedat">UpdatedAt</h4>
 <p>&quot;updatedAt&quot; property should be set in constructor through &quot;getUpdatedAt&quot; method like:</p>
 <pre><code>public function getUpdatedAt()
 {
@@ -174,7 +120,7 @@ This will improve testability and turn the creation of reallife like fixtures po
       return $this;
 }</code></pre>
 <p></p>
-<h4>Soft Delete</h4>
+<h4 id="soft-delete">Soft Delete</h4>
 <pre><code>public function isDeleted()
 {
     return null !== $this-&gt;deletedAt &amp;&amp; new \DateTime() &gt;= $this-&gt;deletedAt;
@@ -190,22 +136,22 @@ public function setDeletedAt(\DateTime $deletedAt)
     $this-&gt;deletedAt = $deletedAt;
     return $this;
 }</code></pre>
-<h4>Making sure a field match a string</h4>
+<h4 id="making-sure-a-field-match-a-string">Making sure a field match a string</h4>
 <pre><code>@Assert\Choice(callback={"Beubi\Bundle\Provider\ThingProvider","getThingTypeKeyChoices"})</code></pre>
-<h4>Strings</h4>
+<h4 id="strings">Strings</h4>
 <p>Each string field should have the minimum necessary length.
 When it is not possible to know this minimum length use:
 medium size strings should be like (e.g. used in input field):</p>
 <pre><code> @ORM\Column(type="string", length=200)</code></pre>
 <p>the biggest size strings should be like  (e.g. used in textarea field):</p>
 <pre><code> @ORM\Column(type="string", length=255)</code></pre>
-<h4>Files</h4>
+<h4 id="files">Files</h4>
 <p>When uploading files to register that in db we are placing this</p>
 <pre><code>@Vich\Uploadable</code></pre>
 <p>in the entity, and then this</p>
 <pre><code>@Assert\File(maxSize="5M", mimeTypes = {"application/pdf", "application/x-pdf"})</code></pre>
 <p>At <code>$file</code> property where we are asserting file max-size and mime-types</p>
-<h4>Inheritances</h4>
+<h4 id="inheritances">Inheritances</h4>
 <p>We must use when the target tables are alike</p>
 <pre><code>@ORM\InheritanceType("JOINED")
 @ORM\DiscriminatorMap({"Thing" = "Thing", "AnotherThing" = "AnotherThing")</code></pre>
@@ -214,11 +160,11 @@ medium size strings should be like (e.g. used in input field):</p>
 @ORM\DiscriminatorMap({"file" = "File", "attachment" = "Attachment", "photo" = "Photo"})</code></pre>
 <p>When target tables are different from each other (e.g. from Intervener and Attachment)</p>
 <h2><a name="Naming"></a>Naming</h2>
-<h3>Variables</h3>
+<h3 id="variables">Variables</h3>
 <p><strong>Prohibited</strong> names for variables;
 <code>form</code>
 <code>entity</code></p>
-<h3>Controller methods</h3>
+<h3 id="controller-methods">Controller methods</h3>
 <p>Every controller method must end with &quot;Action&quot;</p>
 <p><strong>Standard controller actions</strong>
 <code>index</code>
@@ -237,11 +183,11 @@ returns redirect, flash msg
 redirects or returns a view with create form
 <code>new</code>
 returns view with form</p>
-<h3>Entity methods</h3>
+<h3 id="entity-methods">Entity methods</h3>
 <p>Names of method that return a boolean must start with &quot;is...&quot; or &quot;has...&quot;
 Names of method that changes a property must start with &quot;set...&quot;
 Names of method that returns a property must start with &quot;get...&quot;</p>
-<h3>Entity properties</h3>
+<h3 id="entity-properties">Entity properties</h3>
 <p>Properties must be in English.
 No abbreviations are allowed.
 When properties are ManyToOne relations they should match the class name.
@@ -288,12 +234,12 @@ And it must be present for every rout but &quot;/&quot; - homepage (login page)<
 <li>ROLE_THING_EDIT</li>
 <li>ROLE_THING_DELETE                          </li>
 </ul>
-<h3>Use examples</h3>
+<h3 id="use-examples">Use examples</h3>
 <p>Calling service</p>
 <pre><code>$this-&gt;container-&gt;get('security.context')-&gt;isGranted('ROLE_AUTH')</code></pre>
 <p>From annotations</p>
 <pre><code>@Security("has_role('ROLE_AUTH')</code></pre>
-<h3>Voters</h3>
+<h3 id="voters">Voters</h3>
 <p>All voters are called each time you use the isGranted() method on Symfony's security context (i.e. the security.context service). Each one decides if the current user should have access to some resource.
 To create a custom Voter, you need to implement 3 methods:</p>
 <ul>
@@ -345,9 +291,9 @@ A method &quot;create…&quot; should be implemented in order to create an entit
 e.g. createUser()
 A class &quot;DataFixture&quot; should be created from which every loading fixtures responsible classes should extend.</p>
 <h2><a name="Forms"></a>Forms</h2>
-<h3>Dynamic Forms</h3>
+<h3 id="dynamic-forms">Dynamic Forms</h3>
 <p><a href="http://symfony.com/doc/current/cookbook/form/dynamic_form_modification.html">http://symfony.com/doc/current/cookbook/form/dynamic_form_modification.html</a></p>
-<h3>Change forms</h3>
+<h3 id="change-forms">Change forms</h3>
 <p>Modify form based on submitted data:
 Events:
 <code>PRE_SET_DATA</code>
@@ -370,11 +316,11 @@ $builder-&gt;get('thing')-&gt;addEventListener(
     function (FormEvent $event) use ($formModifier) {
         $formModifier($event-&gt;getForm()-&gt;getParent(), $thing);
  });</code></pre>
-<h3>Dependent Forms</h3>
+<h3 id="dependent-forms">Dependent Forms</h3>
 <p>Update the form using ajax
 The trick to update the form using ajax, is just ask the form if the button was really pressed during the form submission.</p>
 <pre><code>if ($form-&gt;get('save')-&gt;isClicked() &amp;&amp; $form-&gt;isValid()) {</code></pre>
-<h3>Form Events</h3>
+<h3 id="form-events">Form Events</h3>
 <p><a href="http://symfony.com/doc/current/components/form/form_events.html">http://symfony.com/doc/current/components/form/form_events.html</a></p>
 <h2><a name="Testing"></a>Testing</h2>
 <p>We will have blackbox and whitebox tests.</p>
@@ -397,7 +343,7 @@ Behat config file will be placed in the project root dir.</p>
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="http://yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
 
         <script>
             $(function() {

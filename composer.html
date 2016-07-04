@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Beubi CS!</title>
+        <title>Beubi&#039;s Technical Documentation</title>
 
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/font-awesome.min.css">
@@ -16,16 +16,12 @@
         <header class="navbar navbar-default navbar-fixed-top">
 
             <a class="navbar-brand" href="http://beubi.bitbucket.org/">
-                <img src="http://beubi.com/bundles/beubiwebsite/images/logo.png" style="height: 40px;display: inline;">
-                Beubi CS!
+                Beubi&#039;s Technical Documentation
                 <small class="hidden-xs hidden-sm">
-                    This is a great project.
+                     
                 </small>
             </a>
 
-                            <a href="https://bitbucket.org/beubi/beubi.bitbucket.org">
-                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://www.robert-king.com/images/forkme.png" alt="Fork me on Bitbucket" data-canonical-src="http://www.robert-king.com/images/forkme.png">
-                </a>
             
         </header>
 
@@ -38,7 +34,12 @@
                         <ul class="nav nav-pills nav-stacked">
                                                             <li class="">
                                     <a href="http://beubi.bitbucket.org/index.html">
-                                        Home page
+                                        Introduction
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://beubi.bitbucket.org/git.html">
+                                        Version control system - Git
                                     </a>
                                 </li>
                                                             <li class="">
@@ -51,11 +52,6 @@
                                         JS CS
                                     </a>
                                 </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/git.html">
-                                        Version control system - Git
-                                    </a>
-                                </li>
                                                             <li class="active">
                                     <a href="http://beubi.bitbucket.org/composer.html">
                                         Composer
@@ -66,80 +62,30 @@
                                         Sf2 Guideline
                                     </a>
                                 </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Routing">
-                                        <span class="sub-menu">Routing</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Templating">
-                                        <span class="sub-menu">Templating</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Entities">
-                                        <span class="sub-menu">Entities</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Naming">
-                                        <span class="sub-menu">Naming</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Security">
-                                        <span class="sub-menu">Security</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Enumerations">
-                                        <span class="sub-menu">Enumerations</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Dates">
-                                        <span class="sub-menu">Dates</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#DataFixtures">
-                                        <span class="sub-menu">DataFixtures</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Forms">
-                                        <span class="sub-menu">Forms</span>
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html#Testing">
-                                        <span class="sub-menu">Testing</span>
-                                    </a>
-                                </li>
                                                     </ul>
 
                     </nav>
 
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1>Composer</h1>
-<h3>Adding packages</h3>
+                    <h1 id="composer">Composer</h1>
+<h3 id="adding-packages">Adding packages</h3>
 <p>The recommended way to add packages is to do a composer require:</p>
 <pre><code>composer require package1</code></pre>
 <p>This command will try to get the best version for you but you are free to change it latter.
 If you want the package to go to the require-dev just append the command with <code>--dev</code></p>
-<h3>Bootstrapping</h3>
+<h3 id="bootstrapping">Bootstrapping</h3>
 <p>When you want to bootstrap a project you MUST do a composer install</p>
 <pre><code>composer install</code></pre>
-<h3>Updating packages</h3>
+<h3 id="updating-packages">Updating packages</h3>
 <p>To update a package you MUST do a composer udpate.
 You can add the packages you want next to the command.</p>
 <pre><code>composer update package1 package2 package3</code></pre>
-<h3>Fix lock</h3>
+<h3 id="fix-lock">Fix lock</h3>
 <p>Sometimes you might want to update the references of your composer.lock file. E.g. because some package has updated its source name.
 You can do that with a composer update --lock</p>
 <pre><code>composer update --lock</code></pre>
-<h3>Versions</h3>
+<h3 id="versions">Versions</h3>
 <p>Versions SHOULD block new features and allow bug fixes.
 When this is not possible, you are free to choose the best strategy. Remember that in some cases you might want to block the version to a commit hash.</p>
 <p>E.g. of safe versions:</p>
@@ -163,7 +109,7 @@ When this is not possible, you are free to choose the best strategy. Remember th
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="http://yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
 
         <script>
             $(function() {
