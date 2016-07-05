@@ -36,7 +36,7 @@
                             </p>
 
                             <ul class="nav nav-pills nav-stacked">
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="http://beubi.bitbucket.org/index.html">
                                             Introduction
                                         </a>
@@ -62,7 +62,7 @@
                                             2. Ready For Work
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="http://beubi.bitbucket.org/3development.html">
                                             3. Development
                                         </a>
@@ -124,8 +124,60 @@
 
                 
                 <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1 id="coding-standards">Coding standards</h1>
-<p>In this repo we collect the guidelines we use when writing code and, more importantly, design software at Beubi.</p>
+                    <h1><strong> 3. Development </strong></h1>
+<h3><strong> When creating/implementing a new feature, you MUST: </strong></h3>
+<ul>
+<li>create the branch from &quot;develop&quot;</li>
+<li>use Git Flow nomenclature (e.g. “feature/”)</li>
+<li>add the project code in upper case (e.g. &quot;IMFQE-XXX&quot;)</li>
+<li>review the summary discription manually </li>
+</ul>
+<pre><code>&lt;&lt;Git Flow tag&gt;&gt;/&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA Issue summary (~30 letters)&gt;&gt;
+
+Ex.: feature/IMFQE-999-docker-support</code></pre>
+<p><em>Tip: You can easily do this, in your web browser, by using <a href="https://ubiprism.atlassian.net">JIRA</a>. Just use the &quot;Create branch&quot; link at the Issue page and follow the steps.</em></p>
+<h4 id="knowing-this-there-are-some-other-recommendations-that-you-should-follow-regarding-issue-management">Knowing this, there are some other recommendations that you should follow, regarding issue management:</h4>
+<ul>
+<li>the Assignee (the one to whom the issue resolution is assigned) is responsible for the timely progress of the issue</li>
+<li>if relevant, changes to provisioning, migrations, tests or README should be included</li>
+<li>avoid having multiple issues with 'Development' status</li>
+</ul>
+<h3><strong> On the subject of creating new commits, every commit MUST respect the following structure: </strong></h3>
+<ul>
+<li>a title is required, with a blank line separating the (optional) discription</li>
+<li>titles should be in the format &quot;PROJECTCODE-ISSUENUMBER Some title&quot;</li>
+<li>the description should begin with “If applied, this commit will ... “ or an equivalent expression</li>
+<li>it should not exceed 72 characters</li>
+</ul>
+<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt; &lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) commit description&gt;&gt;
+
+Ex.: IMFQE-999 Implemented docker support</code></pre>
+<p><em>Tip: You can just copy the branch name to speedup this process.</em></p>
+<h4 id="knowing-this-there-are-some-other-recommendations-that-you-should-follow-regarding-commit-management">Knowing this, there are some other recommendations that you should follow, regarding commit management:</h4>
+<ul>
+<li>do some self code-review before opening a new pull-request</li>
+<li>the &quot;resolve&quot; mindset is diferent from “review”</li>
+<li>it can be done online, on Bitbucket, or using “git diff develop”</li>
+<li>every line should be useful to the resolution of the issue at hand</li>
+<li>remove mistakenly introduced code (e.g. spaces)</li>
+<li>avoid 'Since I'm here..&quot; corrections, they should be left to other issues</li>
+</ul>
+<h3><strong> Concerning acceptance criteria (AC), there are some guidelines that MUST be followed as well, such as: </strong></h3>
+<ul>
+<li>check the AC, item by item; a pull request that doesn't respect the AC is a waste of resources </li>
+<li>the AC is &quot;law&quot;: before you breake it, you have to (and you must) propose a change to it</li>
+<li>revisions to the AC should be made with the approval of the Project Manager</li>
+<li>you can propose changes based on disagreement, unforeseen cases that are not covered or because they can simplify the development process</li>
+<li>modifications to the AC must be done as soon as possible in the development process</li>
+<li>elements out of the AC's scope should be avoided</li>
+</ul>
+<h4 id="knowing-this-there-are-some-other-recommendations-that-you-should-follow-before-opening-a-new-pull-request">Knowing this, there are some other recommendations that you should follow, before opening a new pull request:</h4>
+<ul>
+<li>running unit tests is mandatory</li>
+<li>functional tests that, predictably, will fail must be run as well</li>
+</ul>
+<h3><strong> When your branch is ready, make a pull request using <a href="https://bitbucket.org/">Bitbucket</a>; just go to &quot;Create Pull Request&quot;, choose your branch as source and &quot;develop&quot; as destination. </strong></h3>
+<p><em>Tip: If you are using a command-line interface terminal, at the time you commit, you'll see a link that you can use to get to the pull request creation page.</em></p>
                 </section>
 
             </div>

@@ -36,7 +36,7 @@
                             </p>
 
                             <ul class="nav nav-pills nav-stacked">
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="http://beubi.bitbucket.org/index.html">
                                             Introduction
                                         </a>
@@ -67,7 +67,7 @@
                                             3. Development
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="http://beubi.bitbucket.org/4codereview.html">
                                             4. Code Review
                                         </a>
@@ -124,8 +124,48 @@
 
                 
                 <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1 id="coding-standards">Coding standards</h1>
-<p>In this repo we collect the guidelines we use when writing code and, more importantly, design software at Beubi.</p>
+                    <h1><strong> 4. Code Review </strong></h1>
+<h3><strong> When creating a new pull request (PR), you MUST take this principles into account: </strong></h3>
+<ul>
+<li>a description should be made, as it will guide the &quot;reading&quot; of the PR</li>
+<li>if the commit list is empty, the description filling procedure is almost automatic</li>
+<li>resultant dependencies and underlying context needed to the comprehension of the problem should be explicitly mentioned in the PR, eliminating the need to check the issue for additional information</li>
+</ul>
+<h3><strong> Finally, the pull request message MUST have the following signature </strong></h3>
+<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) short description&gt;&gt;</code></pre>
+<p><em>Tip: If you follow this principles, the description should be automatically filled for you with a list of the commits made</em></p>
+<h3><strong> When you're done, you can click the &quot;Create pull request&quot; button. </strong></h3>
+<h3><strong> Since the Assignee is the author of the pull request (PR), he has the responsibility to guarantee that: </strong></h3>
+<ul>
+<li>the builds pass</li>
+<li>there are no conflicts</li>
+<li>his peers participate and contribute to the code-review</li>
+<li>the PR has, at least, one approve from a coleague</li>
+<li>the PR does not desynchronize too much from develop</li>
+<li>new issues that arise from the debate are opened</li>
+<li>it's clear which sugestions were adressed or which were not</li>
+<li>the issue is marked as reviewed on JIRA</li>
+</ul>
+<h4 id="knowing-this-there-are-some-other-recommendations-that-you-should-follow-after-opening-a-new-pull-request-pr">Knowing this, there are some other recommendations that you should follow, after opening a new pull request (PR):</h4>
+<ul>
+<li>code-review should be done only after the build has passed</li>
+<li>you must reject your own PR if:
+<ul>
+<li>the changes to be made are conceptually too distinct</li>
+<li>there are too many changes (&gt;20%)</li>
+</ul></li>
+<li>avoid multiple push requests</li>
+<li>“code-review” is not a valid description to a commit</li>
+<li>the author of the PR is the one who should mark on Jira that the code-review is finished, making sure that:
+<ul>
+<li>for every comment made:
+<ul>
+<li>the proposed solution is accepted by the majority of the participants</li>
+<li>there were created new issues for questions outside the scope of the PR</li>
+<li>the scope of the issue was revised (with the Project Manager's approval)</li>
+</ul></li>
+</ul></li>
+</ul>
                 </section>
 
             </div>

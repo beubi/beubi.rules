@@ -8,7 +8,7 @@
 
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://beubi.bitbucket.org/css/highlight.dark.css">
+        <link rel="stylesheet" href="http://beubi.bitbucket.org/css/highlight.tomorrow-night.css">
         <link rel="stylesheet" href="http://beubi.bitbucket.org/css/main.css">
     </head>
     <body>
@@ -31,43 +31,99 @@
                 
                     <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
 
-                        <ul class="nav nav-pills nav-stacked">
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/index.html">
-                                        Introduction
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/git.html">
-                                        Version control system - Git
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/phpcs.html">
-                                        PHP CS
-                                    </a>
-                                </li>
-                                                            <li class="active">
-                                    <a href="http://beubi.bitbucket.org/jscs.html">
-                                        JS CS
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/composer.html">
-                                        Composer
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://beubi.bitbucket.org/sf2.html">
-                                        Sf2 Guideline
-                                    </a>
-                                </li>
-                                                    </ul>
+                                                    <p class="text-muted">
+                                
+                            </p>
 
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/index.html">
+                                            Introduction
+                                        </a>
+                                    </li>
+                                                            </ul>
+                                                    <p class="text-muted">
+                                Workflow
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/git.html">
+                                            <i class="fa fa-bitbucket" aria-hidden="true"></i> Git - Version Control System
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/1todo.html">
+                                            1. To Do
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/2readywork.html">
+                                            2. Ready For Work
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/3development.html">
+                                            3. Development
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/4codereview.html">
+                                            4. Code Review
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/5functionalreview.html">
+                                            5. Functional Review
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/6readydeploy.html">
+                                            6. Ready To Deploy
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/7deployed.html">
+                                            7. Deployed
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/communication.html">
+                                            <i class="fa fa-comments-o" aria-hidden="true"></i> Communication
+                                        </a>
+                                    </li>
+                                                            </ul>
+                                                    <p class="text-muted">
+                                Coding Standard
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/phpcs.html">
+                                            PHP
+                                        </a>
+                                    </li>
+                                                                    <li class="active">
+                                        <a href="http://beubi.bitbucket.org/jscs.html">
+                                            JavaScript
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/composer.html">
+                                            Composer
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://beubi.bitbucket.org/sf2.html">
+                                            Symfony2 Guidelines
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        
                     </nav>
 
                 
-                <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
+                <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
                     <h1 id="coding-standards-for-javascript">Coding standards for JavaScript</h1>
 <blockquote>
 <p>THIS DOCUMENT IS A DRAFT / PROPOSAL.</p>
@@ -313,17 +369,9 @@ var filePath = path.join(__dirname, './config/' + filename + '.yml');</code></pr
             </div>
         </main>
 
-        <footer>
-            <div class="container-fluid">
-                <p class="text-muted">
-                    website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
-                </p>
-            </div>
-        </footer>
-
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+        <script src="//yandex.st/highlightjs/7.5/highlight.min.js"></script>
 
         <script>
             $(function() {
