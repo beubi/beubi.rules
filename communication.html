@@ -92,7 +92,7 @@
                                             <i class="fa fa-files-o" aria-hidden="true"></i> Multiple Issues
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="http://beubi.bitbucket.org/communication.html">
                                             <i class="fa fa-comments-o" aria-hidden="true"></i> Communication
                                         </a>
@@ -113,7 +113,7 @@
                                             JavaScript
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="http://beubi.bitbucket.org/composer.html">
                                             Composer
                                         </a>
@@ -129,32 +129,51 @@
 
                 
                 <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1><strong> Composer Guidelines </strong></h1>
-<h3 id="adding-packages">Adding packages</h3>
-<p>The recommended way to add packages is to do a composer require:</p>
-<pre><code>composer require package1</code></pre>
-<p>This command will try to get the best version for you but you are free to change it latter.
-If you want the package to go to the require-dev just append the command with <code>--dev</code></p>
-<h3 id="bootstrapping">Bootstrapping</h3>
-<p>When you want to bootstrap a project you MUST do a composer install</p>
-<pre><code>composer install</code></pre>
-<h3 id="updating-packages">Updating packages</h3>
-<p>To update a package you MUST do a composer udpate.
-You can add the packages you want next to the command.</p>
-<pre><code>composer update package1 package2 package3</code></pre>
-<h3 id="fix-lock">Fix lock</h3>
-<p>Sometimes you might want to update the references of your composer.lock file. E.g. because some package has updated its source name.
-You can do that with a composer update --lock</p>
-<pre><code>composer update --lock</code></pre>
-<h3 id="versions">Versions</h3>
-<p>Versions SHOULD block new features and allow bug fixes.
-When this is not possible, you are free to choose the best strategy. Remember that in some cases you might want to block the version to a commit hash.</p>
-<p>E.g. of safe versions:</p>
+                    <h1><strong> Communication </strong></h1>
+<h2 id="validation-collaboration-and-learning">Validation, Collaboration and Learning</h2>
+<p>These are some conduct recommendations that should be followed, as to mantain an healthy workplace culture.</p>
+<h3><strong> It is desirable that the validation processes are objective and automated </strong></h3>
 <ul>
-<li><code>~1.2</code>      (&gt;=1.2 &lt;2.0.0)</li>
-<li><code>~1.2.3</code>    (&gt;=1.2.3 &lt;1.3.0)</li>
+<li>do the builds pass or not?</li>
+<li>was the process completed or not?</li>
+<li>main validation with subjective component:
+<ul>
+<li>is the solution easily comprehensible for the other team members?</li>
+</ul></li>
 </ul>
-<p>The <code>~</code> char makes the last digit to go up.</p>
+<h3><strong> The code-review process must be one of seeking help </strong></h3>
+<ul>
+<li>“how can I improve this solution? Is there an obvious, safer and/or efficient way of solving this problem? Which is it?”</li>
+<li>“will this modification have consequences that are not being properly anticipated?”</li>
+<li>“is this consistent with other areas of the project?”</li>
+</ul>
+<h3><strong> Learning </strong></h3>
+<ul>
+<li>become aware of other ways of tackling a problem</li>
+<li>disseminate technical and functional knowledge, be it specific or generic</li>
+</ul>
+<h2 id="the-challenges-of-written-language">The challenges of written language</h2>
+<h3><strong> Formality vs. Informality </strong></h3>
+<ul>
+<li>there are times in which one must be serious, formal and precise and there are other times, as well, in which one can be expansive and friendly</li>
+<li>what is written in an issue or in a pull request, for example, must exhibit a formal posture</li>
+<li>neither Jira nor BitBucket are places for comedy, underlying opinions or personal attacks; irony, ellipsis or vague answers should not be used</li>
+</ul>
+<h3><strong> Affirmations vs. Opinions </strong></h3>
+<ul>
+<li>almost everything written in a code-review or specification is subjective and it must be presented as such</li>
+</ul>
+<h3><strong> Avoid conflicts without being passive </strong></h3>
+<ul>
+<li>misunderstandings have shared responsabilities</li>
+<li>receptivity is key when arguing with someone with a different opinion</li>
+<li>don't use &quot;you&quot; and &quot;I&quot; but use instead “the X approach has the Y advantage”</li>
+<li>it does not should come to “my solution vs. your solution” but instead try to aim for a better “our solution”</li>
+<li>defend your positions with structured arguments</li>
+<li>if possible, follow a critique of something that you think is wrong with a clear suggestion of improvement</li>
+<li>everytime a written discussion gets difficult, change the conversation channel to something less formal, like Slack or even in person, in portuguese, and record the conclusions in the issue or pull request</li>
+<li>there are no stupid solutions, nor there are stupid persons in our team; there are only solutions that are more easily perceivable to some of us then to others</li>
+</ul>
                 </section>
 
             </div>

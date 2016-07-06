@@ -72,7 +72,7 @@
                                             4. Code Review
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="http://beubi.bitbucket.org/5functionalreview.html">
                                             5. Functional Review
                                         </a>
@@ -113,7 +113,7 @@
                                             JavaScript
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="http://beubi.bitbucket.org/composer.html">
                                             Composer
                                         </a>
@@ -129,32 +129,14 @@
 
                 
                 <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1><strong> Composer Guidelines </strong></h1>
-<h3 id="adding-packages">Adding packages</h3>
-<p>The recommended way to add packages is to do a composer require:</p>
-<pre><code>composer require package1</code></pre>
-<p>This command will try to get the best version for you but you are free to change it latter.
-If you want the package to go to the require-dev just append the command with <code>--dev</code></p>
-<h3 id="bootstrapping">Bootstrapping</h3>
-<p>When you want to bootstrap a project you MUST do a composer install</p>
-<pre><code>composer install</code></pre>
-<h3 id="updating-packages">Updating packages</h3>
-<p>To update a package you MUST do a composer udpate.
-You can add the packages you want next to the command.</p>
-<pre><code>composer update package1 package2 package3</code></pre>
-<h3 id="fix-lock">Fix lock</h3>
-<p>Sometimes you might want to update the references of your composer.lock file. E.g. because some package has updated its source name.
-You can do that with a composer update --lock</p>
-<pre><code>composer update --lock</code></pre>
-<h3 id="versions">Versions</h3>
-<p>Versions SHOULD block new features and allow bug fixes.
-When this is not possible, you are free to choose the best strategy. Remember that in some cases you might want to block the version to a commit hash.</p>
-<p>E.g. of safe versions:</p>
+                    <h1><strong> 5. Functional Review </strong></h1>
+<h3><strong> When an issue gets to the stage of funtional review, these are the guidelines that MUST be followed: </strong></h3>
 <ul>
-<li><code>~1.2</code>      (&gt;=1.2 &lt;2.0.0)</li>
-<li><code>~1.2.3</code>    (&gt;=1.2.3 &lt;1.3.0)</li>
+<li>the assignee must be the Project Manager (PM)</li>
+<li>the PM verifies on QEM the functional impact of QEM</li>
+<li>code-tasks must be used for modifications that are certain to not have any negative functional impact and, with that, the PM can approve the issues swiftly</li>
+<li>it is the PM that approves or merge pull-requests</li>
 </ul>
-<p>The <code>~</code> char makes the last digit to go up.</p>
                 </section>
 
             </div>

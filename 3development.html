@@ -47,7 +47,7 @@
                             </p>
 
                             <ul class="nav nav-pills nav-stacked">
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="http://beubi.bitbucket.org/git.html">
                                             <i class="fa fa-bitbucket" aria-hidden="true"></i> Git - Version Control System
                                         </a>
@@ -62,7 +62,7 @@
                                             2. Ready For Work
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="http://beubi.bitbucket.org/3development.html">
                                             3. Development
                                         </a>
@@ -129,33 +129,7 @@
 
                 
                 <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1><strong> Git - Version Control System </strong></h1>
-<p>In this section it's described the workflow of the issues.</p>
-<h2 id="1">1. <a href="1todo.html">To Do</a></h2>
-<h3><strong> When creating a new issue, you MUST abide by these guidelines: </strong></h3>
-<ul>
-<li>when in doubt: create an issue!</li>
-<li>the minimum requirement is a title</li>
-<li>it's acceptable to create the issue in two steps:
-<ul>
-<li>making a brief description, immediately</li>
-<li>making a more detailed description, as soon as possible</li>
-</ul></li>
-<li>introduce the acceptance criteria:
-<ul>
-<li>objective and formal</li>
-<li>mandatory, even if vague, for functional questions</li>
-</ul></li>
-</ul>
-<h2 id="2">2. <a href="2readywork.html">Ready For Work</a></h2>
-<h3><strong> When dealing with unassigned issues, these are the principles that MUST be followed: </strong></h3>
-<ul>
-<li>manual transitions are done only after it's stablished that the issue has the necessary details needed to its execution</li>
-<li>for issues with funcional impact, the transition needs the approval of the Project Manager (PM)</li>
-<li>either the PM or someone who wants to adress the issue can set the status as &quot;Ready For Work&quot;</li>
-<li>ideally, the estimated amount of time needed to complete the issue should be included</li>
-</ul>
-<h2 id="3">3. <a href="3development.html">Development</a></h2>
+                    <h1><strong> 3. Development </strong></h1>
 <h3><strong> When creating/implementing a new feature, you MUST: </strong></h3>
 <ul>
 <li>create the branch from &quot;develop&quot;</li>
@@ -209,67 +183,6 @@ Ex.: IMFQE-999 Implemented docker support</code></pre>
 </ul>
 <h3><strong> When your branch is ready, make a pull request using <a href="https://bitbucket.org/">Bitbucket</a>; just go to &quot;Create Pull Request&quot;, choose your branch as source and &quot;develop&quot; as destination. </strong></h3>
 <p><em>Tip: If you are using a command-line interface terminal, at the time you commit, you'll see a link that you can use to get to the pull request creation page.</em></p>
-<h2 id="4">4. <a href="4codereview.html">Code Review</a></h2>
-<h3><strong> When creating a new pull request (PR), you MUST take this principles into account: </strong></h3>
-<ul>
-<li>a description should be made, as it will guide the &quot;reading&quot; of the PR</li>
-<li>if the commit list is empty, the description filling procedure is almost automatic</li>
-<li>resultant dependencies and underlying context needed to the comprehension of the problem should be explicitly mentioned in the PR, eliminating the need to check the issue for additional information</li>
-</ul>
-<h3><strong> As such, the pull request message MUST have the following signature </strong></h3>
-<pre><code>&lt;&lt;JIRA Project Code&gt;&gt;-&lt;&lt;JIRA Issue number&gt;&gt;-&lt;&lt;JIRA summary (~30 letters)&gt;&gt; &lt;&lt;(optional) short description&gt;&gt;</code></pre>
-<p><em>Tip: If you follow this principles, the description should be automatically filled for you with a list of the commits made</em></p>
-<h3><strong> Since the Assignee is the author of the pull request (PR), he has the responsibility to guarantee that: </strong></h3>
-<ul>
-<li>the builds pass</li>
-<li>there are no conflicts</li>
-<li>his peers participate and contribute to the code-review</li>
-<li>the PR has, at least, one approve from a coleague</li>
-<li>the PR does not desynchronize too much from develop</li>
-<li>new issues that arise from the debate are opened</li>
-<li>it's clear which sugestions were adressed or which were not</li>
-<li>the issue is marked as reviewed on JIRA</li>
-</ul>
-<h4 id="knowing-this-there-are-some-other-recommendations-that-you-should-follow-after-opening-a-new-pull-request-pr">Knowing this, there are some other recommendations that you should follow, after opening a new pull request (PR):</h4>
-<ul>
-<li>code-review should be done only after the build has passed</li>
-<li>you must reject your own PR if:
-<ul>
-<li>the changes to be made are conceptually too distinct</li>
-<li>there are too many changes (&gt;20%)</li>
-</ul></li>
-<li>avoid multiple push requests</li>
-<li>“code-review” is not a valid description of a commit</li>
-<li>the author of the PR is the one who should mark on Jira that the code-review is finished, making sure that:
-<ul>
-<li>for every comment made:
-<ul>
-<li>the proposed solution is accepted by the majority of the participants</li>
-<li>there were created new issues for questions outside the scope of the PR</li>
-<li>the scope of the issue was revised (with the Project Manager's approval)</li>
-</ul></li>
-</ul></li>
-</ul>
-<h2 id="5">5. <a href="5functionalreview.html">Functional Review</a></h2>
-<h3><strong> When an issue gets to the stage of funtional review, these are the guidelines that MUST be followed: </strong></h3>
-<ul>
-<li>the assignee must be the Project Manager (PM)</li>
-<li>the PM verifies on QEM the functional impact of QEM</li>
-<li>code-tasks must be used for modifications that are certain to not have any negative functional impact and, with that, the PM can approve the issues swiftly</li>
-<li>it is the PM that approves or merge pull-requests</li>
-</ul>
-<h2 id="6">6. <a href="6readydeploy.html">Ready To Deploy</a></h2>
-<h3><strong> This is a transitional stage, where: </strong></h3>
-<ul>
-<li>it transitions automaticaly with the merge action, which is one of the reasons why cross-merges are avoided</li>
-<li><a href="https://jenkins.ubiprism.pt/">Jenkins</a> does periodic merge tests from develop to master, where it validates that the tests will keep on passing after the merge</li>
-</ul>
-<h2 id="7">7. <a href="7deployed.html">Deployed</a></h2>
-<h3><strong> This is the final issue estage, where: </strong></h3>
-<ul>
-<li>Jenkins transitions automaticaly to &quot;Deployed&quot;</li>
-<li>as soon as an issue is deployed, it's irreversible; any unaddressed questions or problems introduced must be adressed in other new issues</li>
-</ul>
                 </section>
 
             </div>
