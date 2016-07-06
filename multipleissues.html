@@ -82,12 +82,12 @@
                                             6. Ready To Deploy
                                         </a>
                                     </li>
-                                                                    <li class="active">
+                                                                    <li class="">
                                         <a href="http://beubi.bitbucket.org/7deployed.html">
                                             7. Deployed
                                         </a>
                                     </li>
-                                                                    <li class="">
+                                                                    <li class="active">
                                         <a href="http://beubi.bitbucket.org/multipleissues.html">
                                             <i class="fa fa-files-o" aria-hidden="true"></i> Multiple Issues
                                         </a>
@@ -129,11 +129,58 @@
 
                 
                 <section class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1><strong> 7. Deployed </strong></h1>
-<h3><strong> This is the final issue estage, where: </strong></h3>
+                    <h1><strong> Multiple Issues </strong></h1>
+<p>These are the guidelines followed by the company regarding the approach used when dealing with multiple issues.</p>
+<h2 id="divide-and-conquer">Divide and Conquer</h2>
+<h3><strong> If a problem can be separated in multiple, smaller problems, usually it's worth it </strong></h3>
 <ul>
-<li>Jenkins transitions automaticaly to &quot;Deployed&quot;</li>
-<li>as soon as an issue is deployed, it's irreversible; any unaddressed questions or problems introduced must be adressed in other new issues</li>
+<li>the cost of fractioning an issue/branch/pull request is small, when compared with the benefits of adressing more atomic problems:
+<ul>
+<li>code reviewing takes less time</li>
+<li>there is a smaller chance of missing mistakes</li>
+<li>partial solutions/advantages are available sooner</li>
+</ul></li>
+</ul>
+<h3><strong> There are diferent types of division </strong></h3>
+<ul>
+<li>isolate part of a pull request to create a smaller one</li>
+<li>totally separate complementary but independent scopes</li>
+<li>separate the main portion from the complementary one</li>
+</ul>
+<h3><strong> Reflect every modification in the relationships and acceptance criteria of the issues </strong></h3>
+<h2 id="priorities">Priorities</h2>
+<h3><strong> Blocking questions </strong></h3>
+<ul>
+<li>we should interrupt immediately what we are doing when:
+<ul>
+<li>there's a direct mention in the team chat</li>
+<li>a blocking issue is directly assigned to us</li>
+<li>there's a blocking issue or urgent situation that no one is adressing yet</li>
+<li>opening an issue to introduce new improvements/necessities</li>
+</ul></li>
+</ul>
+<h3><strong> Priority questions </strong></h3>
+<ul>
+<li>we should adress these questions as soon as possible when:
+<ul>
+<li>there's a mention to us in a pull-request or e-mail</li>
+<li>there are conflicts to fix in one of our pull requests (PR)</li>
+<li>there are builds, of which we are the authors, that are failing</li>
+<li>keep tabs on the code review of our PRs</li>
+<li>add details to issues previously opened by us</li>
+<li>proceeding with the development of issues already started by us but that are not yet finished</li>
+</ul></li>
+</ul>
+<h3><strong> Between issues, the main factor of distinction is their own priority </strong></h3>
+<ul>
+<li>it's more relevant to help the team advance on a high priority issue (by doing code review, discussing a better approach, etc) than starting the development of a low priority one!</li>
+</ul>
+<h3><strong> Criteria used to differentiate between issues with the same priority </strong></h3>
+<ul>
+<li>doing code review of open pull requests</li>
+<li>participate in the discussion and introducing details in issues with status &quot;To Do&quot;</li>
+<li>start developing issues that have been assigned to me</li>
+<li>doing self-assign of an issue</li>
 </ul>
                 </section>
 
