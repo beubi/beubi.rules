@@ -8,4 +8,4 @@ env:
 
 script:
   - php couscous.phar self-update
-  - php couscous.phar travis-auto-deploy
+  - php couscous.phar travis-auto-deploy --php-version=5.6
