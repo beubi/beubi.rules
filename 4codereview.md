@@ -42,3 +42,5 @@ currentMenu: codereview
         * the proposed solution is accepted by the majority of the participants
         * there were created new issues for questions outside the scope of the PR
         * the scope of the issue was revised (with the Project Manager's approval)
+
+
