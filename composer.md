@@ -2,7 +2,7 @@
 currentMenu: composer
 ---
 
-# Composer
+# ** Composer Guidelines **
 
 ### Adding packages
 

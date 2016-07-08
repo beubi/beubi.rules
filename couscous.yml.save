@@ -1,0 +1,72 @@
+template:
+    url: https://github.com/CouscousPHP/Template-Light
+
+scripts:
+    before:
+      - mkdir -p .couscous/generated/images
+      - cp images/* .couscous/generated/images
+
+exclude:
+    - vendor
+    - website
+
+baseUrl: http://beubi.bitbucket.org
+
+bitbucket:
+    user: beubi
+    repo: beubi.bitbucket.org
+
+title: Beubi CS!
+subTitle: This is a great project.
+
+menu:
+    sections:
+    	items:
+        	home:
+            	text: Ho	me page
+            		relativeUrl: index.html
+        phpcs:
+            text: PHP CS
+            relativeUrl: phpcs.html
+        jscs:
+            text: JS CS
+            relativeUrl: jscs.html
+        git:
+            text: Version control system - Git
+            relativeUrl: git.html
+        composer:
+            text: Composer
+            relativeUrl: composer.html
+        sf2:
+            text: Sf2 Guideline
+            relativeUrl: sf2.html
+        sf2.routing:
+            text: "<span class=\"sub-menu\">Routing</span>"
+            relativeUrl: sf2.html#Routing
+        sf2.templating:
+            text: "<span class=\"sub-menu\">Templating</span>"
+            relativeUrl: sf2.html#Templating
+        sf2.entities:
+            text: "<span class=\"sub-menu\">Entities</span>"
+            relativeUrl: sf2.html#Entities
+        sf2.naming:
+            text: "<span class=\"sub-menu\">Naming</span>"
+            relativeUrl: sf2.html#Naming
+        sf2.security:
+            text: "<span class=\"sub-menu\">Security</span>"
+            relativeUrl: sf2.html#Security
+        sf2.enumerations:
+            text: "<span class=\"sub-menu\">Enumerations</span>"
+            relativeUrl: sf2.html#Enumerations
+        sf2.dates:
+            text: "<span class=\"sub-menu\">Dates</span>"
+            relativeUrl: sf2.html#Dates
+        sf2.dataFixtures:
+            text: "<span class=\"sub-menu\">DataFixtures</span>"
+            relativeUrl: sf2.html#DataFixtures
+        sf2.forms:
+            text: "<span class=\"sub-menu\">Forms</span>"
+            relativeUrl: sf2.html#Forms
+        sf2.testing:
+            text: "<span class=\"sub-menu\">Testing</span>"
+            relativeUrl: sf2.html#Testing

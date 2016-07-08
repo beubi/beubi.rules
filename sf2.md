@@ -2,7 +2,7 @@
 currentMenu: sf2
 ---
 
-# Symfony2 Guideline
+# ** Symfony2 Guidelines **
 
 ## <a name="Routing"></a>Routing
 

@@ -6,7 +6,7 @@ exclude:
     - website
 
 # Base URL of the published website
-baseUrl: https://beubi.github.io/beubi.rules/
+baseUrl: http://beubi.bitbucket.org
 
 # Used to link to the GitHub project
 bitbucket:

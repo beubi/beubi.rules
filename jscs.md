@@ -2,14 +2,13 @@
 currentMenu: jscs
 ---
 
-# Coding standards for JavaScript
+# ** JavaScript Coding Standard @Beubi **
 
 > THIS DOCUMENT IS A DRAFT / PROPOSAL.
 
 > DO NOT CONSIDER IT ANYTHING OFFICIAL FOR NOW.
 
-This guide describes the set of rules we apply
-on the frontend, mostly with JavaScript.
+This guide describes the set of rules we apply on the frontend, mostly with JavaScript.
 
 ## Formatting
 

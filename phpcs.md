@@ -2,7 +2,7 @@
 currentMenu: phpcs
 ---
 
-# PHP coding standards @Beubi
+# ** PHP Coding Standard @Beubi **
 
 This guide describes the set of rules we apply at Beubi in our PHP codebase.
 
