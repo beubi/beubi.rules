@@ -7,4 +7,5 @@ env:
     secure: SzZZ/gMj7lTcSWPoZp73jHnmH15+/FJs49eu71c8mFkawe5XNehIJkRWTC9L+Ls7n7q+Dau9BwZJ61p6IEscH5Cg6YnxDPYsUmI0gVVqJuz0SHHiKe4X4d3hZqndD/dcigYu9E5/+LEJaehpAWsuYqg/nZ7qn4Oy7x+bT2ZC514vbXshxgAoVQP0HtKlThXE78MEzhbmec6fC/QNNnxsyJnVnPEp+9mPq4A1MvCXOM4HRdrLMQTwkH5jER7q29X9U/8NYyiMQuSt1uDY00dBEPdYIura6vjSaQbLq/Tgg0mqAGFCdoaKyihM0jiKFhpdn+KIW0b6gahXEjs1fMjUcs1INX3gLaiFeyOVuTJO63yUp6OdrxO/lcZZNob/5NQW7W7aOzhR0Dy9WtGNnhJi9NycZ1Td1Kco3MkIaf8zoOpuUi1wGi2IMf9h4xbjDl2lArjfak/tlqP30i5vaFCAnqpq9KybiOecm+IUSE9n3ArwoasKH87Qlq//pfMhBF8p/Kzw9pMQN3EfyLEHLnmoq7gF/v8faswAUFlZlWsZJjKGTBk/7b5VXyC4lh3n48bvMiFN+CPDaRVhAiMqRZxVrIIeuMGD5V6y8hvisk9yXeMYOnpv66rFLd2nWUAxMC8qR/3K3MsbRhOZWemMPJaP0OGhVI6iiXtvnk/hDPoxzQY=
 
 script:
-  - php -d display_errrors=1 couscous.phar travis-auto-deploy
+  - curl -OS http://couscous.io/couscous.phar -o couscous
+  - php -d display_errrors=1 couscous travis-auto-deploy
